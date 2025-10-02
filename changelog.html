@@ -3,69 +3,144 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Changelog - Twayfly Client</title>
+  <title>Twayfly Client - Changelog</title>
   <style>
-    body { background:#0f172a; color:#e2e8f0; font-family:Arial, sans-serif; padding:20px; }
-    h1 { text-align:center; color:#38bdf8; }
-    h2 { margin-top:30px; color:#34d399; }
-    ul { list-style:none; padding:0; }
-    li { background:#1e293b; margin:5px 0; padding:10px; border-radius:8px; }
-    .type-0 { border-left:4px solid #22c55e; }
-    .type-1 { border-left:4px solid #facc15; }
-    .type-2 { border-left:4px solid #ef4444; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url("fundo.gif") no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+    }
+
+    header {
+      background: rgba(20, 20, 20, 0.8);
+      padding: 15px 25px;
+      text-align: center;
+      font-size: 20px;
+      font-weight: bold;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.6);
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 20px;
+      background: rgba(30, 30, 30, 0.85);
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.6);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      margin: 8px 0;
+      padding: 12px;
+      border-radius: 8px;
+      background: rgba(40, 40, 40, 0.8);
+      transition: transform 0.2s ease, background 0.3s ease;
+    }
+
+    li:hover {
+      transform: translateX(6px);
+      background: rgba(60, 60, 60, 0.9);
+    }
+
+    .type-0 { border-left: 5px solid #00c853; } /* Adicionado */
+    .type-1 { border-left: 5px solid #ffc107; } /* Alterado */
+    .type-2 { border-left: 5px solid #e53935; } /* Removido */
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+      font-size: 14px;
+      background: rgba(20,20,20,0.8);
+    }
+
+    footer a {
+      color: #00c853;
+      text-decoration: none;
+      margin: 0 8px;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
-  <h1>📜 Changelog - Twayfly Client</h1>
+  <header>
+    📜 Twayfly Client - Changelog
+  </header>
 
-  <h2>✨ Novos recursos</h2>
-  <ul class="type-0">
-    <li>Crosshair Mod: 3 new styles</li>
-    <li>Animations Mod: Smooth sneak setting</li>
-    <li>Hotbar Mod: New option to use the client theme</li>
-    <li>Hotbar Mod: New pickup animation setting</li>
-    <li>New Mod: Female gender cosmetic</li>
-    <li>New Mod: Cat ears</li>
-    <li>Client: Added more Language support</li>
-    <li>Client: Added UI sounds</li>
-    <li>Client: Added macOS dock icons</li>
-    <li>HUD: Added new HUD styles</li>
-    <li>HUD: Added Blurred background option</li>
-    <li>HUD: Added Mojangles font option</li>
-    <li>Menus: GuiIngameMenu now uses the Twayfly style</li>
-    <li>Cosmetics: Added a ton of new capes</li>
-    <li>Cosmetics: Made Custom capes better</li>
-    <li>Mod Menu: 10+ new themes</li>
-    <li>Mod Menu: New home screen</li>
-    <li>Mod Menu: New Minigames (bird and clickyCat)</li>
-  </ul>
+  <div class="container">
+    <h2>Últimas mudanças</h2>
+    <ul id="changelogList"></ul>
+  </div>
 
-  <h2>⚡ Melhorias</h2>
-  <ul class="type-1">
-    <li>Mod Menu: Back buttons in more places</li>
-    <li>Mod Menu: Improve the mod menu design</li>
-    <li>Mod Menu: Better search with aliases</li>
-    <li>Mod Menu: Type-to-search enabled</li>
-    <li>Mod Menu: Arrow keys navigation</li>
-    <li>Mod Menu: Ban warning for risky modules</li>
-    <li>Client: Click out of bounds closes GUIs</li>
-    <li>Client: Change the setup menu</li>
-    <li>Client: Twayfly auto-update check</li>
-    <li>Client: Rebrand & new fonts</li>
-    <li>Client: Linux & macOS compatibility</li>
-    <li>HudEditor: Shift for precise movement</li>
-    <li>HudEditor: Added tooltips</li>
-    <li>Cosmetics: Capes now save on exit</li>
-  </ul>
+  <footer>
+    Feito a partir do <b>Soar Client</b> • 
+    <a href="index.html">Voltar ao site</a>
+  </footer>
 
-  <h2>❌ Remoções</h2>
-  <ul class="type-2">
-    <li>Removed Browser (performance)</li>
-    <li>Removed ViaVersion (performance)</li>
-    <li>Removed Music player</li>
-    <li>Removed Soar API → replaced with remote</li>
-    <li>Removed Soar Premium → all features free</li>
-  </ul>
+  <script>
+    const changelogs = {
+      "changelogs": [
+        { "text": "Crosshair Mod: 3 new styles", "type": 0 },
+        { "text": "Animations Mod: Smooth sneak setting", "type": 0 },
+        { "text": "Hotbar Mod: New option to use the client theme", "type": 0 },
+        { "text": "Hotbar Mod: New pickup animation setting", "type": 0 },
+        { "text": "New Mod: Female gender, cosmetic that makes your character female", "type": 0 },
+        { "text": "New Mod: Cat ears", "type": 0 },
+        { "text": "Client: Added more Language support", "type": 0 },
+        { "text": "Client: Added UI sounds", "type": 0 },
+        { "text": "Client: Added macOS dock icons", "type": 0 },
+        { "text": "HUD: Added new HUD styles", "type": 0 },
+        { "text": "HUD: Added Blurred background option", "type": 0 },
+        { "text": "HUD: Added Mojangles font option", "type": 0 },
+        { "text": "Menus: GuiIngameMenu now uses the Twayfly style", "type": 0 },
+        { "text": "Cosmetics: Added a ton of new capes", "type": 0 },
+        { "text": "Cosmetics: Made Custom capes better", "type": 0 },
+        { "text": "Mod Menu: 10+ new themes", "type": 0 },
+        { "text": "Mod Menu: New home screen", "type": 0 },
+        { "text": "Mod Menu: New Minigames to play in the client while you wait for games to start (bird and clickyCat)", "type": 0 },
+        { "text": "Mod Menu: Back buttons in more places", "type": 1 },
+        { "text": "Mod Menu: Improve the mod menu design", "type": 1 },
+        { "text": "Mod Menu: Made it so when you search it will search also for common aliases of the mod", "type": 1 },
+        { "text": "Mod Menu: you can now just Type to search without engaging the search bar", "type": 1 },
+        { "text": "Mod Menu: you can now use arrow keys to scroll up and down", "type": 1 },
+        { "text": "Mod Menu: Modules will now warn you that they may be banable", "type": 1 },
+        { "text": "Client: You can now click out of bounds in some GUIs and it will close", "type": 1 },
+        { "text": "Client: Change the setup menu", "type": 1 },
+        { "text": "Client: Twayfly will check for its own updates", "type": 1 },
+        { "text": "Client: Rebrand most of the client to Twayfly and change the fonts for this", "type": 1 },
+        { "text": "Client: Made TwayflyClient compatible with linux and macOS", "type": 1 },
+        { "text": "HudEditor: Made it so you can use a shift key modifier to disable snapping and make movement/scaling more precise and delete mods by pressing backspace", "type": 1 },
+        { "text": "HudEditor: Added useful tooltips", "type": 1 },
+        { "text": "Cosmetics: Capes now save when the game closes", "type": 1 },
+        { "text": "Mods: Remove browser since it impacts performance", "type": 2 },
+        { "text": "Mods: Remove ViaVersion since it impacts performance", "type": 2 },
+        { "text": "Client: Remove Music player since it impacts performance", "type": 2 },
+        { "text": "Client: Remove Soar API and replace it with remote features", "type": 2 },
+        { "text": "Client: Remove Soar Premium so all featurs are free", "type": 2 }
+      ]
+    };
 
+    const list = document.getElementById("changelogList");
+    changelogs.changelogs.forEach(item => {
+      const li = document.createElement("li");
+      li.classList.add(`type-${item.type}`);
+      li.innerText = item.text;
+      list.appendChild(li);
+    });
+  </script>
 </body>
 </html>
