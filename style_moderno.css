@@ -1,0 +1,151 @@
+
+/* ==============================
+   Star Client - Redesign Moderno
+   ============================== */
+
+/* Paleta de cores */
+:root {
+  --cor-fundo: #0f172a;
+  --cor-fundo-secundaria: #1e293b;
+  --cor-texto: #f1f5f9;
+  --cor-destaque: #84cc16;
+  --cor-hover: #a3e635;
+  --cor-card: #1e293b;
+  --sombra-neon: 0 0 15px rgba(132, 204, 22, 0.6);
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--cor-fundo);
+  color: var(--cor-texto);
+  line-height: 1.6;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s;
+}
+a:hover {
+  color: var(--cor-hover);
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 1.5rem;
+}
+
+/* Navbar */
+.navbar {
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(12px);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(132, 204, 22, 0.2);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  background: var(--cor-destaque);
+  color: #0f172a;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 6rem 1rem;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  background: linear-gradient(90deg, #84cc16, #a3e635);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #cbd5e1;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Botões */
+.btn {
+  display: inline-block;
+  background: var(--cor-destaque);
+  color: #0f172a;
+  padding: 0.8rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  margin-top: 2rem;
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--sombra-neon);
+}
+
+/* Cards */
+.card {
+  background: var(--cor-card);
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--sombra-neon);
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin-top: 3rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 4rem;
+  border-top: 1px solid rgba(132, 204, 22, 0.2);
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
