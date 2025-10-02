@@ -1,223 +1,71 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Twayfly Client — Redesigned</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="stylesheet" href="style_moderno.css">
-  <link rel="stylesheet" href="/assets/css/redesign.css">
-  <meta name="theme-color" content="#0f1724">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Twayfly Client</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<!-- Login Modal -->
-<div id="loginModal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="loginTitle">
-  <div class="modal-backdrop" id="modalBackdrop"></div>
-  <div class="modal-panel">
-    <button class="modal-close" id="closeModal" aria-label="Fechar">&times;</button>
-    <h2 id="loginTitle">Entrar — Twayfly Client</h2>
-    <p class="muted">Faça login com sua conta ou use o Google.</p>
-
-    <div class="social-login">
-      <button id="googleSignIn" class="btn google">Sign in with Google</button>
+  <header class="navbar">
+    <div class="logo-area">
+      <img src="logo.png" alt="Logo" class="logo">
+      <div class="logo-text">
+        <h1>Twayfly Client</h1>
+        <span>launcher & tools</span>
+      </div>
     </div>
+    <nav>
+      <a href="#" class="nav-link">Download</a>
+      <button id="openLoginBtn" class="btn">Entrar</button>
+    </nav>
+  </header>
 
-    <div class="or"><span>ou</span></div>
-
-    
-
-    <div id="accountMsg" class="muted small"></div>
-  </div>
-</div>
-
-  <div class="page">
-    <header class="site-header">
-      <div class="brand">
-        <img src="logo.png" alt="Twayfly Client Logo" class="logo" viewBox="0 0 24 24" width="34" height="34" aria-hidden="true"><defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#7c5cff"/><stop offset="1" stop-color="#26d0ce"/></linearGradient></defs><circle cx="12" cy="12" r="10" fill="url(#g)"/><path d="M8 12.5c1.5-2 3-3 6-3" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1.2"/></svg>
-        <div class="brand-text">
-          <strong>Twayfly Client</strong>
-          <span class="muted">launcher & tools</span>
-        </div>
+  <main class="hero">
+    <section class="intro-card glass">
+      <h2>Um launcher leve e moderno para sua comunidade</h2>
+      <p>Caro desenvolvedor — interface escura, desempenho otimizado e integração fácil.
+         Customizável, seguro e bonito.</p>
+      <div class="buttons">
+        <a href="Twayfly Client.zip" download class="btn green">Baixar agora</a>
+        <a href="#" class="btn">Documentação</a>
       </div>
-      <nav class="nav">
-        <a href="Twayfly Client.zip" download class="btn ghost">Download</a>
-        <a href="#" class="btn">Entrar</a>
-      </nav>
-    </header>
-
-    <main class="hero">
-      <div class="hero-left glass">
-        <h1>Um launcher leve e moderno para sua comunidade</h1>
-        <p>Caro desenvolvedor — interface escura, desempenho otimizado e integração fácil. Customizável, seguro e bonito.</p>
-
-        <div class="actions">
-          <a class="cta" href="Twayfly Client.zip" download>Baixar agora</a>
-          <a class="secondary" href="#">Documentação</a>
-        </div>
-
-        <ul class="features">
-          <li>Design moderno (Dark + Glassmorphism)</li>
-          <li>Atualizações automáticas</li>
-          <li>Integração com Discord e Roblox</li>
-        </ul>
-      </div>
-
-      <div class="hero-right">
-        <div class="preview glass">
-          <div class="hud">
-            <div class="line"></div>
-            <div class="line short"></div>
-            <div class="line short"></div>
-          </div>
-          <div class="mock">
-            <h3>Twayfly Client Launcher</h3>
-            <p>Versão <strong>1.0.0</strong></p>
-            <div class="download-row">
-              <button class="btn">Instalar</button>
-              <button class="btn ghost">Mais</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </main>
-
-    <section class="socials">
-      <a href="https://Twayfly Clientt.netlify.app/" target="_blank">Site</a>
-      <a href="https://discord.gg/YgrFDK6eUF" target="_blank">Discord</a>
-      <a href="https://www.roblox.com/pt/users/7791741127/profile?friendshipSourceType=ProfileShare" target="_blank">Roblox</a>
-    </section>
-
-    
-    <section class="screenshots">
-      <h2>Screenshots</h2>
-      <div class="carousel">
-        <div class="slides">
-          <img src="2025-10-02_13.13.54.png" alt="screenshot1">
-          <img src="2025-10-02_13.14.04.png" alt="screenshot2">
-          <img src="2025-10-02_13.14.16.png" alt="screenshot3">
-          <img src="2025-10-02_13.14.29.png" alt="screenshot4">
-          <img src="2025-10-02_13.14.38.png" alt="screenshot5">
-          <img src="2025-10-02_13.14.49.png" alt="screenshot6">
-          <img src="2025-10-02_13.14.55.png" alt="screenshot7">
-        </div>
-        <button class="prev">&#10094;</button>
-        <button class="next">&#10095;</button>
-        <div class="dots"></div>
+      <div class="features">
+        <span>⚡ Design moderno (Dark + Glassmorphism)</span>
+        <span>🔄 Atualizações automáticas</span>
+        <span>🤝 Integração com Discord e Roblox</span>
       </div>
     </section>
+  </main>
 
-    <footer class="site-footer">
-      <p>© 2025 Twayfly Client. Feito com ❤️</p>
-    </footer>
+  <section class="carousel-section">
+    <h2>Screenshots</h2>
+    <div class="carousel">
+      <div class="carousel-track">
+        <img src="screenshot1.png" alt="screenshot1">
+        <img src="screenshot2.png" alt="screenshot2">
+        <img src="screenshot3.png" alt="screenshot3">
+        <img src="screenshot4.png" alt="screenshot4">
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <a href="#">Site</a>
+    <a href="#">Discord</a>
+    <a href="#">Roblox</a>
+  </footer>
+
+  <!-- Modal de Login indisponível -->
+  <div id="loginUnavailable" class="modal hidden">
+    <div class="modal-content glass">
+      <span id="closeUnavailable" class="close">&times;</span>
+      <h2>Login indisponível</h2>
+      <p>O login não está disponível no momento.</p>
+      <button id="closeUnavailableBtn" class="btn green">Fechar</button>
+    </div>
   </div>
 
-
-<script>
-let slideIndex = 0;
-let slides = document.querySelectorAll('.carousel .slides img');
-let dotsContainer = document.querySelector('.carousel .dots');
-slides.forEach((_,i)=>{
-  let d=document.createElement('span');
-  d.classList.add('dot');
-  d.addEventListener('click',()=>{showSlide(i)});
-  dotsContainer.appendChild(d);
-});
-let dots=document.querySelectorAll('.dot');
-function showSlide(n){
-  slides.forEach((s,i)=>{
-    s.classList.toggle('active', i===n);
-  });
-  dots.forEach((d,i)=>{
-    d.classList.toggle('active', i===n);
-  });
-  slideIndex=n;
-}
-function nextSlide(){showSlide((slideIndex+1)%slides.length)}
-function prevSlide(){showSlide((slideIndex-1+slides.length)%slides.length)}
-document.querySelector('.next').addEventListener('click',nextSlide);
-document.querySelector('.prev').addEventListener('click',prevSlide);
-function autoPlay(){nextSlide();}
-setInterval(autoPlay,4000);
-showSlide(0);
-</script>
-
-
-
-<script>
-// Modal open/close binding
-const loginModal = document.getElementById('loginModal');
-const openLoginButtons = document.querySelectorAll('.btn[href="#"], .btn.login-trigger');
-const closeModalBtn = document.getElementById('closeModal');
-const modalBackdrop = document.getElementById('modalBackdrop');
-const loginForm = document.getElementById('loginForm');
-const createAccountBtn = document.getElementById('createAccount');
-const accountMsg = document.getElementById('accountMsg');
-
-function openModal(){ loginModal.setAttribute('aria-hidden','false'); }
-function closeModal(){ loginModal.setAttribute('aria-hidden','true'); accountMsg.textContent=''; loginForm.reset(); }
-
-// Bind header "Entrar" button (it has class .btn and text 'Entrar' in header)
-const headerEntrar = Array.from(document.querySelectorAll('.btn')).find(b=>b.textContent.trim().toLowerCase()==='entrar');
-if(headerEntrar) headerEntrar.addEventListener('click', (e)=>{ e.preventDefault(); openModal(); });
-
-closeModalBtn.addEventListener('click', closeModal);
-modalBackdrop.addEventListener('click', closeModal);
-
-// Simple local account system (for demo only)
-// accounts stored in localStorage under key "twayfly_accounts" as object { email: {password, createdAt} }
-function loadAccounts(){ try{ return JSON.parse(localStorage.getItem('twayfly_accounts')||'{}'); }catch(e){return{}} }
-function saveAccounts(obj){ localStorage.setItem('twayfly_accounts', JSON.stringify(obj)); }
-
-loginForm.addEventListener('submit', (e)=>{
-  e.preventDefault();
-  const email = document.getElementById('email').value.trim().toLowerCase();
-  const password = document.getElementById('password').value;
-  const accounts = loadAccounts();
-  if(accounts[email] && accounts[email].password === password){
-    accountMsg.style.color='lightgreen'; accountMsg.textContent='Login bem-sucedido! Você está logado como '+email;
-    // simulate logged-in state (you can replace with real session handling)
-    document.documentElement.setAttribute('data-user', email);
-    setTimeout(closeModal,1200);
-  } else {
-    accountMsg.style.color='salmon'; accountMsg.textContent='Conta não encontrada ou senha incorreta.';
-  }
-});
-
-createAccountBtn.addEventListener('click', ()=>{
-  const email = document.getElementById('email').value.trim().toLowerCase();
-  const password = document.getElementById('password').value;
-  if(!email || !password){ accountMsg.style.color='salmon'; accountMsg.textContent='Preencha email e senha para criar conta.'; return; }
-  const accounts = loadAccounts();
-  if(accounts[email]){ accountMsg.style.color='salmon'; accountMsg.textContent='Já existe conta com esse email.'; return; }
-  accounts[email] = { password: password, createdAt: Date.now() };
-  saveAccounts(accounts);
-  accountMsg.style.color='lightgreen'; accountMsg.textContent='Conta criada com sucesso! Agora clique em Entrar.';
-});
-
-// Google Sign-In placeholder
-const googleBtn = document.getElementById('googleSignIn');
-googleBtn.addEventListener('click', ()=>{
-  // Real Google Sign-In requires a Google Cloud OAuth Client ID and redirect URI.
-  // For a proper "Sign in with Google" you should:
-  // 1. Create an OAuth 2.0 Client ID on Google Cloud Console.
-  // 2. Use Google's OAuth endpoint to request the user's profile (openid email profile).
-  // 3. Handle the OAuth callback on your server (recommended) to securely exchange code for tokens.
-  // Here we'll open a popup to Google's OAuth2 consent screen if you provide CLIENT_ID and redirect URI.
-  const CLIENT_ID = 'YOUR_GOOGLE_OAUTH_CLIENT_ID';
-  const REDIRECT_URI = window.location.origin + '/oauth2callback.html'; // replace with your redirect page
-  const scope = encodeURIComponent('openid email profile');
-  const state = encodeURIComponent('twayfly_'+Math.random().toString(36).slice(2));
-  const oauthUrl = `https://accounts.google.com/o/oauth2/v2/auth?client_id=${CLIENT_ID}&response_type=token&redirect_uri=${encodeURIComponent(REDIRECT_URI)}&scope=${scope}&state=${state}`;
-  // If CLIENT_ID is not set, show instruction to developer
-  if(CLIENT_ID === 'YOUR_GOOGLE_OAUTH_CLIENT_ID'){
-    accountMsg.style.color='gold'; accountMsg.textContent='Para ativar o Google Sign-In, adicione seu Google OAuth CLIENT_ID no código.';
-    return;
-  }
-  window.open(oauthUrl, 'google_signin','width=500,height=650');
-});
-
-</script>
-
+  <script src="script.js"></script>
 </body>
 </html>
