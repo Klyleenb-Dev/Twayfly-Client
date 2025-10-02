@@ -1,185 +1,71 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Twayfly Client</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    /* Reset básico */
-    body,html {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to bottom, #0a0a0a, #1c1c1c);
-      color: white;
-    }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 50px;
-      background: rgba(0,0,0,0.6);
-      position: sticky;
-      top: 0;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 22px;
-      color: #5cff9d;
-    }
-
-    nav a {
-      margin-left: 20px;
-      text-decoration: none;
-      color: white;
-      font-weight: bold;
-    }
-
-    .hero {
-      text-align: center;
-      padding: 80px 20px;
-    }
-    .hero h2 {
-      font-size: 36px;
-      margin-bottom: 15px;
-    }
-    .hero p {
-      font-size: 18px;
-      opacity: 0.8;
-    }
-
-    .btn {
-      display: inline-block;
-      margin: 20px 10px;
-      padding: 12px 20px;
-      border-radius: 8px;
-      font-weight: bold;
-      cursor: pointer;
-      border: none;
-      transition: 0.3s;
-    }
-
-    .btn-discord {
-      background: #5865F2;
-      color: white;
-    }
-
-    .btn-login {
-      background: #333;
-      color: #bbb;
-      cursor: not-allowed;
-    }
-
-    section {
-      padding: 50px 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    h3 {
-      text-align: center;
-      margin-bottom: 30px;
-      font-size: 26px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: rgba(0,0,0,0.8);
-      font-size: 14px;
-      opacity: 0.7;
-    }
-
-    /* Modal */
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 1000;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.7);
-      justify-content: center;
-      align-items: center;
-    }
-
-    .modal-content {
-      background: #222;
-      padding: 20px;
-      border-radius: 10px;
-      text-align: center;
-      max-width: 400px;
-    }
-
-    .modal-content button {
-      margin-top: 15px;
-      padding: 8px 16px;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      background: #5cff9d;
-      color: black;
-      font-weight: bold;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Twayfly Client</h1>
+  <header class="navbar">
+    <div class="logo-area">
+      <img src="logo.png" alt="Logo" class="logo">
+      <div class="logo-text">
+        <h1>Twayfly Client</h1>
+        <span>launcher & tools</span>
+      </div>
+    </div>
     <nav>
-      <a href="#home">Início</a>
-      <a href="#changelog">Changelog</a>
-      <a href="#contato">Contato</a>
+      <a href="#" class="nav-link">Download</a>
+      <button id="openLoginBtn" class="btn">Entrar</button>
     </nav>
   </header>
 
-  <section class="hero" id="home">
-    <h2>Um Launcher Leve e Moderno</h2>
-    <p>FPS otimizado, mods incríveis e uma interface única. Jogue como nunca antes.</p>
-    <button class="btn btn-discord" onclick="window.open('https://discord.gg/YgrFDK6eUF','_blank')">Discord</button>
-    <button class="btn btn-login" onclick="abrirModal()">Login indisponível</button>
-  </section>
+  <main class="hero">
+    <section class="intro-card glass">
+      <h2>Um launcher leve e moderno para sua comunidade</h2>
+      <p>Caro desenvolvedor — interface escura, desempenho otimizado e integração fácil.
+         Customizável, seguro e bonito.</p>
+      <div class="buttons">
+        <a href="Twayfly Client.zip" download class="btn green">Baixar agora</a>
+        <a href="#" class="btn">Documentação</a>
+      </div>
+      <div class="features">
+        <span>⚡ Design moderno (Dark + Glassmorphism)</span>
+        <span>🔄 Atualizações automáticas</span>
+        <span>🤝 Integração com Discord e Roblox</span>
+      </div>
+    </section>
+  </main>
 
-  <section id="changelog">
-    <h3>📌 Changelog</h3>
-    <ul>
-      <li>[02/10/2025] - Página inicial refeita com modal de login.</li>
-      <li>[01/10/2025] - Adicionado bloqueio do clique direito.</li>
-      <li>[30/09/2025] - Melhorias na performance do site.</li>
-    </ul>
+  <section class="carousel-section">
+    <h2>Screenshots</h2>
+    <div class="carousel">
+      <div class="carousel-track">
+        <img src="screenshot1.png" alt="screenshot1">
+        <img src="screenshot2.png" alt="screenshot2">
+        <img src="screenshot3.png" alt="screenshot3">
+        <img src="screenshot4.png" alt="screenshot4">
+      </div>
+    </div>
   </section>
 
   <footer>
-    <p>© 2025 Twayfly Client - Todos os direitos reservados.</p>
+    <a href="#">Site</a>
+    <a href="#">Discord</a>
+    <a href="#">Roblox</a>
   </footer>
 
-  <!-- Modal -->
-  <div id="modal" class="modal">
-    <div class="modal-content">
-      <h3>Login indisponível</h3>
-      <p>No momento o sistema de login está desativado.</p>
-      <button onclick="fecharModal()">Fechar</button>
+  <!-- Modal de Login indisponível -->
+  <div id="loginUnavailable" class="modal hidden">
+    <div class="modal-content glass">
+      <span id="closeUnavailable" class="close">&times;</span>
+      <h2>Login indisponível</h2>
+      <p>O login não está disponível no momento.</p>
+      <button id="closeUnavailableBtn" class="btn green">Fechar</button>
     </div>
   </div>
 
-  <script>
-    // Modal
-    function abrirModal() {
-      document.getElementById("modal").style.display = "flex";
-    }
-    function fecharModal() {
-      document.getElementById("modal").style.display = "none";
-    }
-
-    // Bloquear botão direito
-    document.addEventListener("contextmenu", function(e) {
-      e.preventDefault();
-      alert("Copiar conteúdo não é permitido!");
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
