@@ -193,3 +193,13 @@ footer a:hover {
   font-size: 1.5rem;
   cursor: pointer;
 }
+
+/* ===== Hover Animation Added ===== */
+button, .btn, .button {
+  transition: all 0.3s ease;
+}
+
+button:hover, .btn:hover, .button:hover {
+  transform: scale(1.08);
+  box-shadow: 0px 0px 15px rgba(0, 255, 136, 0.6);
+}

@@ -134,3 +134,13 @@ body{
 #loginForm .form-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:12px}
 .modal-close{position:absolute;right:10px;top:8px;background:transparent;border:none;color:var(--muted);font-size:22px;cursor:pointer}
 .small{font-size:13px}
+
+/* ===== Hover Animation Added ===== */
+button, .btn, .button {
+  transition: all 0.3s ease;
+}
+
+button:hover, .btn:hover, .button:hover {
+  transform: scale(1.08);
+  box-shadow: 0px 0px 15px rgba(0, 255, 136, 0.6);
+}

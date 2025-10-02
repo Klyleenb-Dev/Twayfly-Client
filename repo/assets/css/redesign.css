@@ -76,3 +76,13 @@ body{
   transform: translateY(-3px) scale(1.04);
   box-shadow: 0 12px 24px rgba(0,0,0,0.45);
 }
+
+/* ===== Hover Animation Added ===== */
+button, .btn, .button {
+  transition: all 0.3s ease;
+}
+
+button:hover, .btn:hover, .button:hover {
+  transform: scale(1.08);
+  box-shadow: 0px 0px 15px rgba(0, 255, 136, 0.6);
+}
