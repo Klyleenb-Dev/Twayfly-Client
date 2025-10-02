@@ -5,6 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Twayfly Client</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Estilo do aviso quando tenta copiar */
+    .context-alert {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #1a1a1a;
+      color: #fff;
+      padding: 15px 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.4);
+      font-family: Arial, sans-serif;
+      z-index: 9999;
+      animation: fadeIn 0.3s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
 <body>
   <header class="navbar">
@@ -38,34 +59,27 @@
     </section>
   </main>
 
-  <section class="carousel-section">
-    <h2>Screenshots</h2>
-    <div class="carousel">
-      <div class="carousel-track">
-        <img src="screenshot1.png" alt="screenshot1">
-        <img src="screenshot2.png" alt="screenshot2">
-        <img src="screenshot3.png" alt="screenshot3">
-        <img src="screenshot4.png" alt="screenshot4">
-      </div>
-    </div>
-  </section>
-
   <footer>
     <a href="#">Site</a>
     <a href="#">Discord</a>
     <a href="#">Roblox</a>
   </footer>
 
-  <!-- Modal de Login indisponível -->
-  <div id="loginUnavailable" class="modal hidden">
-    <div class="modal-content glass">
-      <span id="closeUnavailable" class="close">&times;</span>
-      <h2>Login indisponível</h2>
-      <p>O login não está disponível no momento.</p>
-      <button id="closeUnavailableBtn" class="btn green">Fechar</button>
-    </div>
-  </div>
+  <!-- Script do bloqueador -->
+  <script>
+    document.addEventListener("contextmenu", function (e) {
+      e.preventDefault();
 
-  <script src="script.js"></script>
+      let alertBox = document.createElement("div");
+      alertBox.className = "context-alert";
+      alertBox.innerText = "Copiar conteúdo não é permitido!";
+
+      document.body.appendChild(alertBox);
+
+      setTimeout(() => {
+        alertBox.remove();
+      }, 2500);
+    });
+  </script>
 </body>
 </html>
