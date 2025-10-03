@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Navbar -->
   <header class="navbar">
     <div class="logo-area">
       <img src="logo.png" alt="Logo" class="logo">
@@ -17,12 +16,11 @@
       </div>
     </div>
     <nav>
-      <a href="#download" class="nav-link">Download</a>
+      <a href="#" class="nav-link">Download</a>
       <button id="openLoginBtn" class="btn">Entrar</button>
     </nav>
   </header>
 
-  <!-- Hero -->
   <main class="hero">
     <section class="intro-card glass">
       <h2>Um launcher leve e moderno para sua comunidade</h2>
@@ -30,7 +28,7 @@
          Customizável, seguro e bonito.</p>
       <div class="buttons">
         <a href="Twayfly Client.zip" download class="btn green">Baixar agora</a>
-        <a href="#" class="btn">Documentação</a>
+        <a href="changelog.html" class="btn">Documentação</a>
       </div>
       <div class="features">
         <span>⚡ Design moderno (Dark + Glassmorphism)</span>
@@ -40,8 +38,7 @@
     </section>
   </main>
 
-  <!-- Screenshots -->
-  <section class="carousel-section" id="screenshots">
+  <section class="carousel-section">
     <h2>Screenshots</h2>
     <div class="carousel">
       <div class="carousel-track">
@@ -53,19 +50,6 @@
     </div>
   </section>
 
-  <!-- Changelog -->
-  <section class="changelog-section" id="changelog">
-    <h2>Changelog</h2>
-    <div class="changelog glass">
-      <ul>
-        <li>✅ Correções de bugs</li>
-        <li>✨ Nova interface otimizada</li>
-        <li>⚡ Melhorias de performance</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Footer -->
   <footer>
     <a href="#">Site</a>
     <a href="#">Discord</a>
@@ -82,45 +66,6 @@
     </div>
   </div>
 
-  <!-- Script principal -->
   <script src="script.js"></script>
-
-  <!-- Bloqueio do botão direito -->
-  <style>
-    .context-alert {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      background: #1a1a1a;
-      color: #fff;
-      padding: 15px 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.4);
-      font-family: Arial, sans-serif;
-      z-index: 9999;
-      animation: fadeIn 0.3s ease-in-out;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-  </style>
-
-  <script>
-    document.addEventListener("contextmenu", function (e) {
-      e.preventDefault();
-
-      let alertBox = document.createElement("div");
-      alertBox.className = "context-alert";
-      alertBox.innerText = "Copiar conteúdo não é permitido!";
-
-      document.body.appendChild(alertBox);
-
-      setTimeout(() => {
-        alertBox.remove();
-      }, 2500);
-    });
-  </script>
 </body>
 </html>
