@@ -18,6 +18,7 @@
     </div>
     <nav>
       <a href="#download" class="nav-link">Download</a>
+      <a href="documentacao.html" class="nav-link">Documentação</a>
       <button id="openLoginBtn" class="btn">Entrar</button>
     </nav>
   </header>
@@ -30,7 +31,7 @@
          Customizável, seguro e bonito.</p>
       <div class="buttons">
         <a href="Twayfly Client.zip" download class="btn green">Baixar agora</a>
-        <a href="#" class="btn">Documentação</a>
+        <a href="documentacao.html" class="btn">Documentação</a>
       </div>
       <div class="features">
         <span>⚡ Design moderno (Dark + Glassmorphism)</span>
@@ -53,18 +54,6 @@
     </div>
   </section>
 
-  <!-- Changelog -->
-  <section class="changelog-section" id="changelog">
-    <h2>Changelog</h2>
-    <div class="changelog glass">
-      <ul>
-        <li>✅ Correções de bugs</li>
-        <li>✨ Nova interface otimizada</li>
-        <li>⚡ Melhorias de performance</li>
-      </ul>
-    </div>
-  </section>
-
   <!-- Footer -->
   <footer>
     <a href="#">Site</a>
@@ -82,10 +71,9 @@
     </div>
   </div>
 
-  <!-- Script principal -->
   <script src="script.js"></script>
 
-  <!-- Bloqueio do botão direito -->
+  <!-- Bloqueio botão direito -->
   <style>
     .context-alert {
       position: fixed;
@@ -93,14 +81,13 @@
       right: 20px;
       background: #1a1a1a;
       color: #fff;
-      padding: 12px 18px;
+      padding: 15px 20px;
       border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.4);
+      box-shadow: 0 0 20px rgba(0,0,0,0.4);
       font-family: Arial, sans-serif;
       z-index: 9999;
       animation: fadeIn 0.3s ease-in-out;
     }
-
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(-10px); }
       to { opacity: 1; transform: translateY(0); }
@@ -110,16 +97,11 @@
   <script>
     document.addEventListener("contextmenu", function (e) {
       e.preventDefault();
-
       let alertBox = document.createElement("div");
       alertBox.className = "context-alert";
-      alertBox.innerText = "🚫 Copiar conteúdo não é permitido!";
-
+      alertBox.innerText = "Copiar conteúdo não é permitido!";
       document.body.appendChild(alertBox);
-
-      setTimeout(() => {
-        alertBox.remove();
-      }, 2500);
+      setTimeout(() => { alertBox.remove(); }, 2500);
     });
   </script>
 </body>
