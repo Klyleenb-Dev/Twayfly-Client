@@ -260,7 +260,7 @@ nav {
 }
 
 /* ------------------------------------------- */
-/* FOOTER */
+/* FOOTER (CORRIGIDO E CENTRALIZADO) */
 /* ------------------------------------------- */
 footer {
     text-align: center;
@@ -269,16 +269,48 @@ footer {
     background: rgba(10, 10, 20, 0.8);
     border-top: 1px solid rgba(255, 255, 255, 0.08);
     margin-top: auto;
+    /* Centraliza os itens verticalmente */
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    gap: 10px; 
 }
 
-footer a {
+/* Estilo para a div que agrupa os links */
+.footer-links {
+    display: flex; /* Faz os links ficarem um ao lado do outro */
+    justify-content: center; /* Centraliza os links */
+    flex-wrap: wrap; 
+    margin-bottom: 5px; 
+}
+
+.footer-links a { 
     margin: 0 1rem;
     color: #9ca3af;
     text-decoration: none;
     transition: color 0.3s;
 }
 
-footer a:hover {
+.footer-links a:hover {
+    color: #e5e7eb;
+}
+
+/* Estilo para a linha de copyright */
+.copyright {
+    font-size: 0.85rem;
+    color: #7f8fa3; 
+    width: 100%; /* Garante que ocupe a largura total para centralizar o texto */
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Estilo para o link do desenvolvedor dentro do copyright */
+.copyright a {
+    color: #9ca3af;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.copyright a:hover {
     color: #e5e7eb;
 }
 
