@@ -6,17 +6,20 @@
 
 body {
     font-family: Arial, sans-serif;
+    /* Fundo com gradiente radial escuro (roxo/azul) */
     background: radial-gradient(circle at center top, #2a2a4a, #1a1a2e, #0a0a1a);
-    color: #e0e0e0;
+    color: #e0e0e0; /* Cor do texto padrão */
     line-height: 1.6;
     display: flex;
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
-    padding-top: 20px;
+    padding-top: 20px; /* Espaçamento do topo */
 }
 
+/* ------------------------------------------- */
 /* NAVBAR */
+/* ------------------------------------------- */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -24,10 +27,11 @@ body {
     padding: 0.8rem 2rem;
     width: 90%;
     max-width: 1200px;
-    background: rgba(10, 10, 20, 0.7);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
+    /* Preto transparente e blur */
+    background: rgba(10, 10, 20, 0.7); 
+    backdrop-filter: blur(12px); 
+    border: 1px solid rgba(255, 255, 255, 0.1); 
+    border-radius: 15px; /* Arredondamento */
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
     margin-bottom: 4rem;
 }
@@ -38,22 +42,19 @@ body {
     gap: 10px;
 }
 
-/* --- LOGO CORRIGIDA --- */
-/* Se a logo é uma imagem: */
+/* --- LOGO: Estilizando a Imagem (.logo) --- */
 .logo-area img.logo { 
-    height: 35px; /* Tamanho da imagem */
-    width: 35px; /* Garantir que seja quadrada se precisar */
-    border-radius: 50%; /* Se a imagem já tiver um fundo, isso a fará redonda */
-    object-fit: cover; /* Garante que a imagem preencha o círculo */
-    /* Removemos os estilos de background-color, font-size etc. que causaram o bug */
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
-/* Se a logo é um texto (ex: "T"), estilize o h1 */
-.logo-area .logo-text h1 {
+.logo-text h1 {
     font-size: 1.1rem;
     color: #e0e0e0;
-    font-weight: bold; /* Deixei bold para o exemplo, ajuste se necessário */
-    margin: 0; /* Remove margem padrão */
+    font-weight: bold;
+    margin: 0;
 }
 
 .logo-text span {
@@ -61,10 +62,10 @@ body {
     color: #a0a0b0;
 }
 
-.nav-links {
+nav {
     display: flex;
-    gap: 1.5rem;
     align-items: center;
+    gap: 1.5rem;
 }
 
 .nav-link {
@@ -78,56 +79,57 @@ body {
     color: #ffffff;
 }
 
-/* BOTÃO DE LOGIN */
-.btn-login {
+
+/* ------------------------------------------- */
+/* ESTILOS GERAIS DE BOTÕES (.btn) */
+/* ------------------------------------------- */
+.btn {
     padding: 0.7rem 1.5rem;
     border-radius: 10px;
     border: none;
     cursor: pointer;
-    background: #503192;
-    color: white;
     font-weight: bold;
-    transition: background 0.3s, transform 0.3s;
+    transition: all 0.3s ease;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-.btn-login:hover {
+/* === BOTÃO PADRÃO (.btn no HTML: Entrar, Documentação, Fechar) === */
+.btn {
+    background: #503192; /* Roxo escuro para o botão "Entrar" */
+    color: white;
+}
+
+/* === BOTÃO VERDE BRILHANTE (NEON) | Usado no seu HTML como .btn.green === */
+.btn.green { 
+    background: #00ff99; /* Verde neon brilhante */
+    color: #1a1a1a; /* Texto escuro para contraste */
+    box-shadow: 0 4px 15px rgba(0, 255, 153, 0.6); /* Sombra verde brilhante */
+}
+
+/* ------------------------------------------- */
+/* HOVERS DE BOTÕES */
+/* ------------------------------------------- */
+
+/* Hover para botões roxos/escuros (Entrar, Documentação, Fechar) */
+.btn:not(.green):hover {
     background: #6a3abf;
     transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    /* Sombra roxa para botões escuros */
+    box-shadow: 0px 8px 20px rgba(78, 43, 137, 0.6); 
 }
 
-/* BADGES (Product Hunt) */
-.product-badges {
-    display: flex;
-    gap: 10px;
-    margin-right: 2rem;
+/* Hover para botão VERDE BRILHANTE (Baixar agora) */
+.btn.green:hover {
+    background: #00e68a; /* Um pouco mais escuro no hover */
+    transform: translateY(-2px);
+    /* Sombra verde mais intensa */
+    box-shadow: 0 6px 20px rgba(0, 255, 153, 0.8); 
 }
 
-.badge {
-    display: flex;
-    align-items: center;
-    padding: 0.3rem 0.8rem;
-    background: rgba(255, 255, 255, 0.08);
-    border-radius: 20px;
-    color: #e0e0e0;
-    font-size: 0.75rem;
-    font-weight: bold;
-    gap: 5px;
-    border: 1px solid rgba(255, 255, 255, 0.15);
-}
 
-.badge span {
-    color: #a0a0a0;
-    font-weight: normal;
-}
-
-.badge-icon {
-    font-size: 0.9rem;
-    color: #7b4397;
-}
-
-/* HERO SECTION - Título principal */
+/* ------------------------------------------- */
+/* HERO SECTION & GLASS CARD */
+/* ------------------------------------------- */
 .hero {
     display: flex;
     flex-direction: column;
@@ -138,195 +140,73 @@ body {
     max-width: 800px;
 }
 
-.hero h2 {
-    font-size: 2.8rem;
-    color: white;
-    margin-bottom: 0.8rem;
-    font-weight: 700;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    color: #c0c0d0;
-    margin-bottom: 2rem;
-}
-
-/* CARD CENTRAL (Hero Card) */
 .intro-card {
     max-width: 800px;
     width: 90%;
     padding: 2.5rem;
     border-radius: 20px;
-    background: rgba(20, 20, 40, 0.7);
-    backdrop-filter: blur(20px);
+    background: rgba(20, 20, 40, 0.7); /* Fundo escuro semi-transparente */
     border: 1px solid rgba(255, 255, 255, 0.18);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
-    margin-bottom: 4rem;
     text-align: left;
 }
 
-.intro-card h3 {
-    font-size: 1.3rem;
-    color: #ffffff;
-    margin-bottom: 1.5rem;
+/* Efeito Glassmorphism (aplicado na classe .glass) */
+.glass {
+    backdrop-filter: blur(20px); /* Efeito de glassmorphism bem forte */
+}
+
+.intro-card h2 {
+    font-size: 2.2rem; /* Ajustei um pouco para caber melhor */
+    color: white;
+    margin-bottom: 0.8rem;
+    font-weight: 700;
 }
 
 .intro-card p {
     font-size: 1rem;
-    color: #d1d5db;
-    margin-bottom: 1rem;
-}
-
-.intro-card .code-area {
-    background: #1a1a2e;
-    padding: 1.5rem;
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    font-family: 'Consolas', 'Monaco', monospace;
-    font-size: 0.9rem;
-    color: #e0e0e0;
-    white-space: pre-wrap;
+    color: #c0c0d0;
     margin-bottom: 1.5rem;
 }
 
-.card-actions {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 1.5rem;
-}
-
-.action-icons {
-    display: flex;
-    gap: 1rem;
-}
-
-.action-icon {
-    font-size: 1.5rem;
-    color: #a0a0b0;
-    cursor: pointer;
-    transition: color 0.3s;
-}
-
-.action-icon:hover {
-    color: #ffffff;
-}
-
-/* --- BOTÕES VERDES BRILHANTES --- */
-.action-btn.green-brilliant { /* Use essa classe no seu HTML para o botão verde */
-    padding: 0.6rem 1.2rem;
-    border-radius: 8px;
-    background: #00ff99; /* Verde neon brilhante */
-    color: #1a1a1a; /* Texto escuro para contraste */
-    border: none;
-    cursor: pointer;
-    font-size: 0.9rem;
-    font-weight: bold;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 255, 153, 0.6); /* Sombra brilhante */
-}
-
-.action-btn.green-brilliant:hover {
-    background: #00e68a; /* Um pouco mais escuro no hover */
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 255, 153, 0.8); /* Sombra mais intensa */
-}
-
-
-.action-btn { /* Estilo padrão para outros action-buttons, se houver */
-    padding: 0.6rem 1.2rem;
-    border-radius: 8px;
-    background: #3a3a5e; /* Fundo do botão dentro do card */
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 0.9rem;
-    font-weight: bold;
-    transition: background 0.3s, transform 0.3s;
-}
-
-.action-btn:hover {
-    background: #4b4b7a;
-    transform: translateY(-1px);
-}
-
-
-/* BOTÕES ABAIXO DO CARD (Hero Buttons) */
-.hero-buttons {
+.buttons {
     display: flex;
     gap: 1.5rem;
-    margin-top: 2rem;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.hero-button {
-    padding: 0.8rem 1.8rem;
-    border-radius: 10px;
-    background: #2a2a4a;
-    color: #e0e0e0;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    cursor: pointer;
-    font-size: 1rem;
-    font-weight: 500;
-    transition: background 0.3s, border-color 0.3s, transform 0.3s;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.hero-button:hover {
-    background: #3a3a60;
-    border-color: rgba(255, 255, 255, 0.2);
-    transform: translateY(-2px);
-}
-
-/* SEÇÃO "COMUNIDADE" */
-.community-section {
-    width: 90%;
-    max-width: 1200px;
-    margin-top: 5rem;
-    text-align: center;
-}
-
-.community-section h3 {
-    font-size: 2rem;
-    color: white;
     margin-bottom: 2rem;
-    font-weight: 600;
-}
-
-.community-tags {
-    display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
 }
 
-.community-tag {
-    padding: 0.6rem 1.2rem;
-    border-radius: 20px;
-    background: #2a2a4a;
-    color: #c0c0d0;
+.features {
+    text-align: left;
+}
+
+.features span {
+    display: inline-block;
+    background: rgba(255,255,255,0.08); /* Fundo sutil para badges */
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem; /* Para quebra de linha */
     font-size: 0.9rem;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    cursor: pointer;
-    transition: background 0.3s, border-color 0.3s;
+    color: #e5e7eb;
 }
 
-.community-tag:hover {
-    background: #3a3a60;
-    border-color: rgba(255, 255, 255, 0.2);
-}
-
-.icon {
-    margin-right: 5px;
-}
-
+/* ------------------------------------------- */
+/* CAROUSEL SECTION */
+/* ------------------------------------------- */
 .carousel-section {
     text-align: center;
     padding: 2rem 1rem;
     margin-top: 5rem;
     width: 90%;
     max-width: 1200px;
+}
+
+.carousel-section h2 {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 2rem;
+    font-weight: 600;
 }
 
 .carousel {
@@ -340,21 +220,26 @@ body {
 
 .carousel-track {
     display: flex;
-    animation: scroll 20s linear infinite;
+    /* Animação simplificada, você precisará de JavaScript para o controle total */
+    animation: scroll 20s linear infinite; 
 }
 
 .carousel img {
-    width: 800px;
+    min-width: 800px; /* Largura da imagem igual ao max-width do carousel */
     height: 400px;
     object-fit: cover;
 }
 
 @keyframes scroll {
     0% { transform: translateX(0); }
-    100% { transform: translateX(-1600px); }
+    /* Ajuste para mover 3 imagens fora de vista (4 screenshots) */
+    100% { transform: translateX(calc(-800px * 3)); } 
 }
 
-/* Footer */
+
+/* ------------------------------------------- */
+/* FOOTER */
+/* ------------------------------------------- */
 footer {
     text-align: center;
     padding: 2rem;
@@ -368,13 +253,16 @@ footer a {
     margin: 0 1rem;
     color: #9ca3af;
     text-decoration: none;
+    transition: color 0.3s;
 }
 
 footer a:hover {
     color: #e5e7eb;
 }
 
-/* Modal */
+/* ------------------------------------------- */
+/* MODAL */
+/* ------------------------------------------- */
 .modal {
     display: flex;
     align-items: center;
@@ -391,7 +279,7 @@ footer a:hover {
 }
 
 .modal-content {
-    background: #1e293b;
+    background: #1e293b; 
     padding: 2rem;
     border-radius: 12px;
     text-align: center;
@@ -408,14 +296,9 @@ footer a:hover {
     font-size: 1.5rem;
     cursor: pointer;
     color: #9ca3af;
+    transition: color 0.3s;
 }
 
-/* ===== Hover Animation Added ===== */
-button, .btn, .hero-button, .action-btn:not(.green-brilliant) {
-  transition: all 0.3s ease;
-}
-
-button:hover, .btn:hover, .hero-button:hover, .action-btn:not(.green-brilliant):hover {
-  transform: translateY(-2px);
-  box-shadow: 0px 8px 20px rgba(78, 43, 137, 0.6);
+.close:hover {
+    color: white;
 }
