@@ -1,473 +1,234 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* 🎨 Tema Claro: Background, Texto e Cores de Fundo Principais */
+/* TEMA ESCURO MODERNO E SUAVE */
 body {
-    font-family: Arial, sans-serif;
-    /* Substitui o gradiente escuro por um branco ou cinza bem claro */
-    background: radial-gradient(circle at top, #f0f4f8, #ffffff); 
-    /* Muda a cor do texto de branco para um cinza escuro para contraste */
-    color: #1f2937; 
-    line-height: 1.6;
+  font-family: Arial, sans-serif;
+  /* Fundo preto suave, não tão escuro, com um toque azulado (Navy Blue) */
+  background: radial-gradient(circle at top, #1c2a41, #0a101b); 
+  color: #f3f4f6; /* Texto branco-sujo para ser menos agressivo que o branco puro */
+  line-height: 1.6;
 }
 
 /* Navbar */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    /* Torna o fundo da navbar claro, com menor opacidade (mais branco) */
-    background: rgba(255, 255, 255, 0.9); 
-    backdrop-filter: blur(8px);
-    /* Adiciona uma sombra suave para destacar */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  /* PRETO TRANSPARENTE: Aumentamos a transparência para o fundo "não tão escuro" aparecer um pouco */
+  background: rgba(10, 10, 20, 0.8); 
+  backdrop-filter: blur(10px); /* Aumentamos o blur para modernizar o efeito */
+  /* Adiciona uma borda sutil na parte de baixo para dar definição */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08); 
 }
 
 .logo-area {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .logo {
-    height: 40px;
+  height: 40px;
 }
 
 .logo-text h1 {
-    font-size: 1.2rem;
-    /* Mantém o texto principal escuro */
-    color: #1f2937; 
+  font-size: 1.2rem;
+  color: #e5e7eb; /* Cor do texto do logo */
 }
 
 .logo-text span {
-    font-size: 0.8rem;
-    /* Usa um cinza médio */
-    color: #6b7280;
+  font-size: 0.8rem;
+  color: #9ca3af;
 }
 
 .nav-link {
-    margin-right: 1rem;
-    /* Links escuros */
-    color: #1f2937;
-    text-decoration: none;
+  margin-right: 1rem;
+  color: #d1d5db; /* Links um pouco mais claros */
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
-/* 🎨 Tema Claro: Botões */
+.nav-link:hover {
+  color: #ffffff; /* Hover no link mais brilhante */
+}
+
+/* Botões */
 .btn {
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-    border: none;
-    cursor: pointer;
-    /* Botão com background cinza claro, texto escuro */
-    background: #e5e7eb;
-    color: #1f2937;
-    transition: 0.3s;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  /* Botão cinza escuro suave */
+  background: #283747;
+  color: white;
+  transition: 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .btn.green {
-    /* O botão verde permanece, mas se você quiser clarear o texto, pode mudar. Deixei o verde mais vibrante para contraste */
-    background: #10b981; /* Verde mais claro */
-    color: white; /* Mantém o texto branco no verde */
+  /* Verde vibrante para contraste (Accent color) */
+  background: #10b981; 
 }
 
 .btn.green:hover {
-    background: #059669; /* Verde um pouco mais escuro no hover */
+  background: #059669;
+  transform: scale(1.05); /* Hover um pouco mais sutil */
 }
 
 .btn:hover {
-    /* Hover mais escuro no botão cinza */
-    background: #d1d5db; 
+  background: #374151;
 }
 
 /* Hero */
 .hero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 3rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 1rem;
 }
 
 .intro-card {
-    max-width: 700px;
-    padding: 2rem;
-    border-radius: 12px;
+  max-width: 700px;
+  padding: 2rem;
+  border-radius: 12px;
 }
 
 .intro-card h2 {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
 }
 
 .intro-card p {
-    margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #d1d5db;
 }
 
 .buttons {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .features span {
-    display: inline-block;
-    /* Mantém uma transparência, mas com cor base clara */
-    background: rgba(0,0,0,0.05); 
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-    margin-right: 0.5rem;
-    font-size: 0.9rem;
-    /* Texto escuro no background claro */
-    color: #1f2937; 
+  display: inline-block;
+  /* Background dos features um pouco mais escuro e sutil */
+  background: rgba(255,255,255,0.08);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  margin-right: 0.5rem;
+  font-size: 0.9rem;
+  color: #e5e7eb;
 }
 
 /* Glass effect */
 .glass {
-    /* Efeito de vidro para tema claro: base branca, borda cinza clara, sombra mais sutil */
-    background: rgba(255, 255, 255, 0.6); 
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(0, 0, 0, 0.1); 
-    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  /* Efeito de vidro modernizado */
+  background: rgba(255, 255, 255, 0.05); 
+  backdrop-filter: blur(15px); /* Mais blur! */
+  border: 1px solid rgba(255, 255, 255, 0.15); /* Borda mais definida */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4); /* Sombra mais intensa */
 }
 
 /* Carousel */
 .carousel-section {
-    text-align: center;
-    padding: 2rem 1rem;
+  text-align: center;
+  padding: 2rem 1rem;
 }
 
 .carousel {
-    overflow: hidden;
-    max-width: 800px;
-    margin: auto;
-    border-radius: 12px;
-    margin-top: 1rem;
+  overflow: hidden;
+  max-width: 800px;
+  margin: auto;
+  border-radius: 12px;
+  margin-top: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .carousel-track {
-    display: flex;
-    animation: scroll 20s linear infinite;
+  display: flex;
+  animation: scroll 20s linear infinite;
 }
 
 .carousel img {
-    width: 800px;
-    height: 400px;
-    object-fit: cover;
+  width: 800px;
+  height: 400px;
+  object-fit: cover;
 }
 
 @keyframes scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-1600px); }
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-1600px); }
 }
 
 /* Footer */
 footer {
-    text-align: center;
-    padding: 2rem;
-    /* Fundo do footer mais claro */
-    background: rgba(243, 244, 246, 0.8);
-    /* Texto escuro */
-    color: #4b5563;
+  text-align: center;
+  padding: 2rem;
+  /* Fundo do footer mais consistente */
+  background: rgba(10, 10, 20, 0.8); 
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 footer a {
-    margin: 0 1rem;
-    /* Links escuros no footer */
-    color: #6b7280;
-    text-decoration: none;
+  margin: 0 1rem;
+  color: #9ca3af;
+  text-decoration: none;
 }
 
 footer a:hover {
-    /* Hover de link principal */
-    color: #1f2937;
+  color: #e5e7eb;
 }
 
 /* Modal */
 .modal {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    inset: 0;
-    /* Mantém o fundo escuro do modal para dar foco ao conteúdo */
-    background: rgba(0, 0, 0, 0.4); 
-    backdrop-filter: blur(4px);
-    z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  inset: 0;
+  /* Background do modal mais escuro para focar */
+  background: rgba(0, 0, 0, 0.7); 
+  backdrop-filter: blur(8px);
+  z-index: 999;
 }
 
 .modal.hidden {
-    display: none;
+  display: none;
 }
 
 .modal-content {
-    /* Background do conteúdo do modal branco ou muito claro */
-    background: #ffffff; 
-    padding: 2rem;
-    border-radius: 12px;
-    text-align: center;
-    /* Texto escuro no modal */
-    color: #1f2937; 
-    width: 350px;
-    position: relative;
-    /* Adiciona uma sombra para destacar */
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); 
+  /* Fundo do modal mais escuro, mas não preto puro */
+  background: #1e293b; 
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  color: white;
+  width: 350px;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
 }
 
 .close {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 1.5rem;
-    cursor: pointer;
-    /* Ícone de fechar escuro */
-    color: #1f2937;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #9ca3af;
 }
 
 /* ===== Hover Animation Added ===== */
 button, .btn, .button {
-    transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 button:hover, .btn:hover, .button:hover {
-    transform: scale(1.08);
-    /* Sombra de hover mais clara, mantendo o tom verde/cian */
-    box-shadow: 0px 0px 15px rgba(0, 150, 255, 0.4); 
-}* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* 🎨 Tema Claro: Background, Texto e Cores de Fundo Principais */
-body {
-    font-family: Arial, sans-serif;
-    /* Substitui o gradiente escuro por um branco ou cinza bem claro */
-    background: radial-gradient(circle at top, #f0f4f8, #ffffff); 
-    /* Muda a cor do texto de branco para um cinza escuro para contraste */
-    color: #1f2937; 
-    line-height: 1.6;
-}
-
-/* Navbar */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    /* Torna o fundo da navbar claro, com menor opacidade (mais branco) */
-    background: rgba(255, 255, 255, 0.9); 
-    backdrop-filter: blur(8px);
-    /* Adiciona uma sombra suave para destacar */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-}
-
-.logo-area {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.logo {
-    height: 40px;
-}
-
-.logo-text h1 {
-    font-size: 1.2rem;
-    /* Mantém o texto principal escuro */
-    color: #1f2937; 
-}
-
-.logo-text span {
-    font-size: 0.8rem;
-    /* Usa um cinza médio */
-    color: #6b7280;
-}
-
-.nav-link {
-    margin-right: 1rem;
-    /* Links escuros */
-    color: #1f2937;
-    text-decoration: none;
-}
-
-/* 🎨 Tema Claro: Botões */
-.btn {
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-    border: none;
-    cursor: pointer;
-    /* Botão com background cinza claro, texto escuro */
-    background: #e5e7eb;
-    color: #1f2937;
-    transition: 0.3s;
-}
-
-.btn.green {
-    /* O botão verde permanece, mas se você quiser clarear o texto, pode mudar. Deixei o verde mais vibrante para contraste */
-    background: #10b981; /* Verde mais claro */
-    color: white; /* Mantém o texto branco no verde */
-}
-
-.btn.green:hover {
-    background: #059669; /* Verde um pouco mais escuro no hover */
-}
-
-.btn:hover {
-    /* Hover mais escuro no botão cinza */
-    background: #d1d5db; 
-}
-
-/* Hero */
-.hero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 3rem 1rem;
-}
-
-.intro-card {
-    max-width: 700px;
-    padding: 2rem;
-    border-radius: 12px;
-}
-
-.intro-card h2 {
-    margin-bottom: 1rem;
-}
-
-.intro-card p {
-    margin-bottom: 1.5rem;
-}
-
-.buttons {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-}
-
-.features span {
-    display: inline-block;
-    /* Mantém uma transparência, mas com cor base clara */
-    background: rgba(0,0,0,0.05); 
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-    margin-right: 0.5rem;
-    font-size: 0.9rem;
-    /* Texto escuro no background claro */
-    color: #1f2937; 
-}
-
-/* Glass effect */
-.glass {
-    /* Efeito de vidro para tema claro: base branca, borda cinza clara, sombra mais sutil */
-    background: rgba(255, 255, 255, 0.6); 
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(0, 0, 0, 0.1); 
-    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-}
-
-/* Carousel */
-.carousel-section {
-    text-align: center;
-    padding: 2rem 1rem;
-}
-
-.carousel {
-    overflow: hidden;
-    max-width: 800px;
-    margin: auto;
-    border-radius: 12px;
-    margin-top: 1rem;
-}
-
-.carousel-track {
-    display: flex;
-    animation: scroll 20s linear infinite;
-}
-
-.carousel img {
-    width: 800px;
-    height: 400px;
-    object-fit: cover;
-}
-
-@keyframes scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-1600px); }
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 2rem;
-    /* Fundo do footer mais claro */
-    background: rgba(243, 244, 246, 0.8);
-    /* Texto escuro */
-    color: #4b5563;
-}
-
-footer a {
-    margin: 0 1rem;
-    /* Links escuros no footer */
-    color: #6b7280;
-    text-decoration: none;
-}
-
-footer a:hover {
-    /* Hover de link principal */
-    color: #1f2937;
-}
-
-/* Modal */
-.modal {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    inset: 0;
-    /* Mantém o fundo escuro do modal para dar foco ao conteúdo */
-    background: rgba(0, 0, 0, 0.4); 
-    backdrop-filter: blur(4px);
-    z-index: 999;
-}
-
-.modal.hidden {
-    display: none;
-}
-
-.modal-content {
-    /* Background do conteúdo do modal branco ou muito claro */
-    background: #ffffff; 
-    padding: 2rem;
-    border-radius: 12px;
-    text-align: center;
-    /* Texto escuro no modal */
-    color: #1f2937; 
-    width: 350px;
-    position: relative;
-    /* Adiciona uma sombra para destacar */
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); 
-}
-
-.close {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 1.5rem;
-    cursor: pointer;
-    /* Ícone de fechar escuro */
-    color: #1f2937;
-}
-
-/* ===== Hover Animation Added ===== */
-button, .btn, .button {
-    transition: all 0.3s ease;
-}
-
-button:hover, .btn:hover, .button:hover {
-    transform: scale(1.08);
-    /* Sombra de hover mais clara, mantendo o tom verde/cian */
-    box-shadow: 0px 0px 15px rgba(0, 150, 255, 0.4); 
+  transform: scale(1.03); /* Ajustei para 1.03 para ser mais moderno/sutil */
+  /* Sombra de hover verde suave */
+  box-shadow: 0px 0px 15px rgba(16, 185, 129, 0.6); 
 }
