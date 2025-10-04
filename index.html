@@ -1,71 +1,77 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Twayfly Client</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Twayfly Client</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="navbar">
-    <div class="logo-area">
-      <img src="logo.png" alt="Logo" class="logo">
-      <div class="logo-text">
-        <h1>Twayfly Client</h1>
-        <span>launcher & tools</span>
-      </div>
-    </div>
-    <nav>
-      <a href="Twayfly Client.zip" class="nav-link">Download</a>
-      <button id="openLoginBtn" class="btn">Entrar</button>
-    </nav>
-  </header>
+  <header class="navbar">
+    <div class="logo-area">
+      <img src="logo.png" alt="Logo" class="logo">
+      <div class="logo-text">
+        <h1>Twayfly Client</h1>
+        <span>launcher & tools</span>
+      </div>
+    </div>
+    <nav>
+      <a href="Twayfly Client.zip" class="nav-link">Download</a>
+      <button id="openLoginBtn" class="btn">Entrar</button>
+    </nav>
+  </header>
 
-  <main class="hero">
-    <section class="intro-card glass">
-      <h2>Um launcher leve e moderno para sua comunidade</h2>
-      <p>Caro desenvolvedor — interface escura, desempenho otimizado e integração fácil.
-         Customizável, seguro e bonito.</p>
-      <div class="buttons">
-        <a href="Twayfly Client.zip" download class="btn green">Baixar agora</a>
-        <a href="changelog.html" class="btn">Documentação</a>
-      </div>
-      <div class="features">
-        <span>⚡ Design moderno (Dark + Glassmorphism)</span>
-        <span>🔄 Atualizações automáticas</span>
-        <span>🤝 Integração com Discord e Roblox</span>
-      </div>
-    </section>
-  </main>
+  <main class="hero">
+    <section class="intro-card glass">
+      <h2>Um launcher leve e moderno para sua comunidade</h2>
+      <p>Caro desenvolvedor — interface escura, desempenho otimizado e integração fácil.
+         Customizável, seguro e bonito.</p>
+      <div class="buttons">
+                <a href="Twayfly Client.zip" download class="btn green">Baixar agora</a>
+        <a href="changelog.html" class="btn">Documentação</a>
+      </div>
+      <div class="features">
+        <span>⚡ Design moderno (Dark + Glassmorphism)</span>
+        <span>🔄 Atualizações automáticas</span>
+        <span>🤝 Integração com Discord e Roblox</span>
+      </div>
+    </section>
+  </main>
 
-  <section class="carousel-section">
-    <h2>Screenshots</h2>
-    <div class="carousel">
-      <div class="carousel-track">
-        <img src="screenshot1.png" alt="screenshot1">
-        <img src="screenshot2.png" alt="screenshot2">
-        <img src="screenshot3.png" alt="screenshot3">
-        <img src="screenshot4.png" alt="screenshot4">
-      </div>
-    </div>
-  </section>
+    <section class="carousel-section">
+    <h2>Screenshots</h2>
+    
+        <div class="carousel-container"> 
+            <button id="prevBtn" class="carousel-btn prev-btn">&lt;&lt;</button> 
 
-  <footer>
-    <a href="https://klyleenb-dev.github.io/Twayfly-Client">Site</a>
-    <a href="https://discord.gg/YgrFDK6eUF">Discord</a>
-    <a href="https://www.roblox.com/share?code=c17183120c099e4faf5b6bf77ffb27b0&type=Profile&source=ProfileShare&stamp=1759453038240">Roblox</a>
-  </footer>
+      <div class="carousel">
+        <div class="carousel-track">
+          <img src="screenshot1.png" alt="screenshot1">
+          <img src="screenshot2.png" alt="screenshot2">
+          <img src="screenshot3.png" alt="screenshot3">
+          <img src="screenshot4.png" alt="screenshot4">
+        </div>
+      </div>
+      
+            <button id="nextBtn" class="carousel-btn next-btn">&gt;&gt;</button> 
+    </div>
+  </section>
 
-  <!-- Modal de Login indisponível -->
-  <div id="loginUnavailable" class="modal hidden">
-    <div class="modal-content glass">
-      <span id="closeUnavailable" class="close">&times;</span>
-      <h2>Login indisponível</h2>
-      <p>O login não está disponível no momento.</p>
-      <button id="closeUnavailableBtn" class="btn green">Fechar</button>
-    </div>
-  </div>
+  <footer>
+    <a href="https://klyleenb-dev.github.io/Twayfly-Client">Site</a>
+    <a href="https://discord.gg/YgrFDK6eUF">Discord</a>
+    <a href="https://www.roblox.com/share?code=c17183120c099e4faf5b6bf77ffb27b0&type=Profile&source=ProfileShare&stamp=1759453038240">Roblox</a>
+  </footer>
 
-  <script src="script.js"></script>
+    <div id="loginUnavailable" class="modal hidden">
+    <div class="modal-content glass">
+      <span id="closeUnavailable" class="close">&times;</span>
+      <h2>Login indisponível</h2>
+      <p>O login não está disponível no momento.</p>
+      <button id="closeUnavailableBtn" class="btn green">Fechar</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
