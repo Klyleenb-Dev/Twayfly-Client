@@ -99,7 +99,7 @@ if (carouselTrack) {
 
 
 // =======================================================
-// --- NOVO: Lógica Anti-Cópia (Botão Direito) ---
+// --- Lógica Anti-Cópia (Botão Direito) ---
 // =======================================================
 document.addEventListener('contextmenu', (event) => {
     // 1. Impede que o menu de contexto padrão do navegador apareça.
