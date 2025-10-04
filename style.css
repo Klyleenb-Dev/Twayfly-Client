@@ -230,7 +230,7 @@ nav {
 .carousel img {
     min-width: 800px; 
     height: 100%;    
-    /* ESSENCIAL: Garante que a imagem caiba completamente, mantendo a proporção */
+    /* Garante que a imagem caiba completamente, mantendo a proporção (não distorce) */
     object-fit: contain; 
 }
 
@@ -283,7 +283,7 @@ footer a:hover {
 }
 
 /* ------------------------------------------- */
-/* MODAL */
+/* MODAL (Com a largura ajustada) */
 /* ------------------------------------------- */
 .modal {
     display: flex;
@@ -306,7 +306,8 @@ footer a:hover {
     border-radius: 12px;
     text-align: center;
     color: white;
-    width: 350px;
+    width: 450px; /* LARGURA AUMENTADA */
+    max-width: 90%; 
     position: relative;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
 }
