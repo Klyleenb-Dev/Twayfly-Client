@@ -1,226 +1,405 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* TEMA ESCURO MODERNO E SUAVE (AGORA MAIS CINZA) */
 body {
-  font-family: Arial, sans-serif;
-  /* NOVIDADE: Fundo mais cinza, sem o toque azulado */
-  background: radial-gradient(circle at top, #2b2b2b, #1a1a1a); 
-  color: #f3f4f6; /* Texto branco-sujo para ser menos agressivo que o branco puro */
-  line-height: 1.6;
+    font-family: Arial, sans-serif;
+    /* Fundo com gradiente radial escuro, com toques de roxo/azul como na imagem */
+    background: radial-gradient(circle at center top, #2a2a4a, #1a1a2e, #0a0a1a);
+    color: #e0e0e0; /* Cor do texto padrão mais clara para contraste */
+    line-height: 1.6;
+    display: flex; /* Para centralizar conteúdo na página se necessário */
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh; /* Garante que o body ocupa a altura total da viewport */
+    padding-top: 20px; /* Espaçamento do topo */
 }
 
-/* Navbar */
+/* NAVBAR */
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background: rgba(10, 10, 20, 0.8); 
-  backdrop-filter: blur(10px); 
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08); 
-  border-bottom-left-radius: 15px; 
-  border-bottom-right-radius: 15px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 2rem; /* Ajustei o padding para ser mais compacto */
+    width: 90%; /* A navbar não ocupa 100% da largura, deixando margens laterais */
+    max-width: 1200px; /* Limita a largura máxima */
+    background: rgba(10, 10, 20, 0.7); /* Preto transparente */
+    backdrop-filter: blur(12px); /* Efeito de glassmorphism mais intenso */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Borda sutil */
+    border-radius: 15px; /* Arredondamento da navbar */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3); /* Sombra para profundidade */
+    margin-bottom: 4rem; /* Espaçamento entre navbar e hero section */
 }
 
 .logo-area {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
+/* O logo na imagem é uma esfera roxa, vou simular isso com um div */
 .logo {
-  height: 40px;
+    height: 35px; /* Tamanho do logo ajustado */
+    width: 35px;
+    background-color: #7b4397; /* Roxo vibrante */
+    border-radius: 50%; /* Faz a esfera */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    color: white;
+    font-weight: bold;
 }
 
 .logo-text h1 {
-  font-size: 1.2rem;
-  color: #e5e7eb; 
+    font-size: 1.1rem; /* Ajustado para ser mais discreto */
+    color: #e0e0e0;
+    font-weight: normal;
 }
 
 .logo-text span {
-  font-size: 0.8rem;
-  color: #9ca3af;
+    font-size: 0.7rem; /* Ajustado */
+    color: #a0a0b0;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem; /* Espaçamento entre os links */
+    align-items: center;
 }
 
 .nav-link {
-  margin-right: 1rem;
-  color: #d1d5db; 
-  text-decoration: none;
-  transition: color 0.3s;
+    color: #c0c0d0; /* Links mais claros */
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s;
 }
 
 .nav-link:hover {
-  color: #ffffff; 
+    color: #ffffff;
 }
 
-/* Botões */
-.btn {
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
-  background: #283747;
-  color: white;
-  transition: 0.3s;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+/* BOTÃO DE LOGIN - Adaptação do botão de "Entrar" da imagem */
+.btn-login {
+    padding: 0.7rem 1.5rem;
+    border-radius: 10px; /* Arredondamento */
+    border: none;
+    cursor: pointer;
+    background: #503192; /* Roxo escuro para o botão de login */
+    color: white;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-.btn.green {
-  background: #10b981; 
+.btn-login:hover {
+    background: #6a3abf; /* Roxo mais claro no hover */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
 }
 
-.btn.green:hover {
-  background: #059669;
-  transform: scale(1.05); 
+/* BADGES (Product Hunt) */
+.product-badges {
+    display: flex;
+    gap: 10px;
+    margin-right: 2rem; /* Espaçamento antes dos links da navbar */
 }
 
-.btn:hover {
-  background: #374151;
+.badge {
+    display: flex;
+    align-items: center;
+    padding: 0.3rem 0.8rem;
+    background: rgba(255, 255, 255, 0.08); /* Fundo sutil */
+    border-radius: 20px; /* Bem arredondado */
+    color: #e0e0e0;
+    font-size: 0.75rem;
+    font-weight: bold;
+    gap: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-/* Hero */
+.badge span {
+    color: #a0a0a0; /* Cor do texto secundário */
+    font-weight: normal;
+}
+
+.badge-icon {
+    font-size: 0.9rem;
+    color: #7b4397; /* Cor roxa para o ícone */
+}
+
+/* HERO SECTION - Título principal */
 .hero {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 3rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 3rem;
+    width: 90%;
+    max-width: 800px;
 }
 
+.hero h2 {
+    font-size: 2.8rem; /* Tamanho da fonte grande */
+    color: white;
+    margin-bottom: 0.8rem;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.2rem; /* Subtítulo */
+    color: #c0c0d0;
+    margin-bottom: 2rem;
+}
+
+/* CARD CENTRAL (Hero Card) */
 .intro-card {
-  max-width: 700px;
-  padding: 2rem;
-  border-radius: 12px;
+    max-width: 800px; /* Largura um pouco maior */
+    width: 90%;
+    padding: 2.5rem; /* Mais padding */
+    border-radius: 20px; /* Mais arredondado */
+    background: rgba(20, 20, 40, 0.7); /* Fundo escuro semi-transparente */
+    backdrop-filter: blur(20px); /* Efeito de glassmorphism bem forte */
+    border: 1px solid rgba(255, 255, 255, 0.18); /* Borda mais visível */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5); /* Sombra mais profunda */
+    margin-bottom: 4rem; /* Espaçamento */
+    text-align: left; /* Alinhamento do texto */
 }
 
-.intro-card h2 {
-  margin-bottom: 1rem;
-  color: #ffffff;
+.intro-card h3 {
+    font-size: 1.3rem;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
 }
 
 .intro-card p {
-  margin-bottom: 1.5rem;
-  color: #d1d5db;
+    font-size: 1rem;
+    color: #d1d5db;
+    margin-bottom: 1rem;
 }
 
-.buttons {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
+.intro-card .code-area {
+    background: #1a1a2e; /* Fundo mais escuro para o bloco de código/texto */
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-family: 'Consolas', 'Monaco', monospace; /* Fonte monoespaçada */
+    font-size: 0.9rem;
+    color: #e0e0e0;
+    white-space: pre-wrap; /* Quebra de linha */
+    margin-bottom: 1.5rem;
 }
 
-.features span {
-  display: inline-block;
-  background: rgba(255,255,255,0.08);
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  margin-right: 0.5rem;
-  font-size: 0.9rem;
-  color: #e5e7eb;
+.card-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5rem;
 }
 
-/* Glass effect */
-.glass {
-  background: rgba(255, 255, 255, 0.05); 
-  backdrop-filter: blur(15px); 
-  border: 1px solid rgba(255, 255, 255, 0.15); 
-  box-shadow: 0 10px 30px rgba(0,0,0,0.4); 
+.action-icons {
+    display: flex;
+    gap: 1rem;
 }
 
-/* Carousel */
+.action-icon {
+    font-size: 1.5rem;
+    color: #a0a0b0;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.action-icon:hover {
+    color: #ffffff;
+}
+
+.action-btn {
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    background: #3a3a5e; /* Fundo do botão dentro do card */
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.action-btn:hover {
+    background: #4b4b7a;
+    transform: translateY(-1px);
+}
+
+/* BOTÕES ABAIXO DO CARD (Hero Buttons) */
+.hero-buttons {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    flex-wrap: wrap; /* Para responsividade */
+    justify-content: center;
+}
+
+.hero-button {
+    padding: 0.8rem 1.8rem;
+    border-radius: 10px;
+    background: #2a2a4a; /* Fundo escuro, roxo-azulado */
+    color: #e0e0e0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background 0.3s, border-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.hero-button:hover {
+    background: #3a3a60; /* Fundo um pouco mais claro no hover */
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* SEÇÃO "COMUNIDADE" */
+.community-section {
+    width: 90%;
+    max-width: 1200px;
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.community-section h3 {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+.community-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.community-tag {
+    padding: 0.6rem 1.2rem;
+    border-radius: 20px;
+    background: #2a2a4a; /* Mesmo fundo dos botões hero */
+    color: #c0c0d0;
+    font-size: 0.9rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    transition: background 0.3s, border-color 0.3s;
+}
+
+.community-tag:hover {
+    background: #3a3a60;
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Ajustes gerais para ícones, se usados (apenas exemplo) */
+.icon {
+    /* Adicione estilos para seus ícones se estiver usando fontes de ícones */
+    margin-right: 5px;
+}
+
+/* A section 'Screenshots' e 'Carousel' não foi incluída na imagem, mas manterei o estilo base */
 .carousel-section {
-  text-align: center;
-  padding: 2rem 1rem;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 5rem;
+    width: 90%;
+    max-width: 1200px;
 }
 
 .carousel {
-  overflow: hidden;
-  max-width: 800px;
-  margin: auto;
-  border-radius: 12px;
-  margin-top: 1rem;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    max-width: 800px;
+    margin: auto;
+    border-radius: 12px;
+    margin-top: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .carousel-track {
-  display: flex;
-  animation: scroll 20s linear infinite;
+    display: flex;
+    animation: scroll 20s linear infinite;
 }
 
 .carousel img {
-  width: 800px;
-  height: 400px;
-  object-fit: cover;
+    width: 800px;
+    height: 400px;
+    object-fit: cover;
 }
 
 @keyframes scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-1600px); }
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-1600px); }
 }
 
-/* Footer */
+/* Footer (mantendo o estilo escuro moderno) */
 footer {
-  text-align: center;
-  padding: 2rem;
-  background: rgba(10, 10, 20, 0.8); 
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    background: rgba(10, 10, 20, 0.8);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    margin-top: auto; /* Empurra o footer para o final da página */
 }
 
 footer a {
-  margin: 0 1rem;
-  color: #9ca3af;
-  text-decoration: none;
+    margin: 0 1rem;
+    color: #9ca3af;
+    text-decoration: none;
 }
 
 footer a:hover {
-  color: #e5e7eb;
+    color: #e5e7eb;
 }
 
-/* Modal */
+/* Modal (mantendo o estilo escuro moderno) */
 .modal {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.7); 
-  backdrop-filter: blur(8px);
-  z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+    z-index: 999;
 }
 
 .modal.hidden {
-  display: none;
+    display: none;
 }
 
 .modal-content {
-  background: #1e293b; 
-  padding: 2rem;
-  border-radius: 12px;
-  text-align: center;
-  color: white;
-  width: 350px;
-  position: relative;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    background: #1e293b;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    color: white;
+    width: 350px;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
 }
 
 .close {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 1.5rem;
-  cursor: pointer;
-  color: #9ca3af;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #9ca3af;
 }
 
 /* ===== Hover Animation Added ===== */
-button, .btn, .button {
+button, .btn, .hero-button, .action-btn {
   transition: all 0.3s ease;
 }
 
-button:hover, .btn:hover, .button:hover {
-  transform: scale(1.03); 
-  box-shadow: 0px 0px 15px rgba(16, 185, 129, 0.6); 
+button:hover, .btn:hover, .hero-button:hover, .action-btn:hover {
+  transform: translateY(-2px); /* Efeito de elevação sutil */
+  box-shadow: 0px 8px 20px rgba(78, 43, 137, 0.6); /* Sombra roxa no hover */
 }
