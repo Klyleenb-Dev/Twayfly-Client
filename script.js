@@ -56,15 +56,11 @@ const totalImages = carouselImages.length;
 function updateCarousel() {
     if (carouselImages.length === 0) return;
     
-    // Obtém a largura atual da imagem (importante para responsividade)
+    // Obtém a largura atual da imagem
     const imageWidth = carouselImages[0].clientWidth; 
     
     // Aplica o movimento (translateX)
     carouselTrack.style.transform = `translateX(${-currentIndex * imageWidth}px)`;
-
-    // Opcional: Desabilitar botões nos limites (se não quiser que ele volte)
-    // prevBtn.disabled = currentIndex === 0;
-    // nextBtn.disabled = currentIndex === totalImages - 1;
 }
 
 // Event Listener para o botão 'Anterior' (Prev)
