@@ -6,15 +6,14 @@
 
 body {
     font-family: Arial, sans-serif;
-    /* Fundo com gradiente radial escuro, com toques de roxo/azul como na imagem */
     background: radial-gradient(circle at center top, #2a2a4a, #1a1a2e, #0a0a1a);
-    color: #e0e0e0; /* Cor do texto padrão mais clara para contraste */
+    color: #e0e0e0;
     line-height: 1.6;
-    display: flex; /* Para centralizar conteúdo na página se necessário */
+    display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 100vh; /* Garante que o body ocupa a altura total da viewport */
-    padding-top: 20px; /* Espaçamento do topo */
+    min-height: 100vh;
+    padding-top: 20px;
 }
 
 /* NAVBAR */
@@ -22,15 +21,15 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.8rem 2rem; /* Ajustei o padding para ser mais compacto */
-    width: 90%; /* A navbar não ocupa 100% da largura, deixando margens laterais */
-    max-width: 1200px; /* Limita a largura máxima */
-    background: rgba(10, 10, 20, 0.7); /* Preto transparente */
-    backdrop-filter: blur(12px); /* Efeito de glassmorphism mais intenso */
-    border: 1px solid rgba(255, 255, 255, 0.1); /* Borda sutil */
-    border-radius: 15px; /* Arredondamento da navbar */
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3); /* Sombra para profundidade */
-    margin-bottom: 4rem; /* Espaçamento entre navbar e hero section */
+    padding: 0.8rem 2rem;
+    width: 90%;
+    max-width: 1200px;
+    background: rgba(10, 10, 20, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    margin-bottom: 4rem;
 }
 
 .logo-area {
@@ -39,39 +38,37 @@ body {
     gap: 10px;
 }
 
-/* O logo na imagem é uma esfera roxa, vou simular isso com um div */
-.logo {
-    height: 35px; /* Tamanho do logo ajustado */
-    width: 35px;
-    background-color: #7b4397; /* Roxo vibrante */
-    border-radius: 50%; /* Faz a esfera */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2rem;
-    color: white;
-    font-weight: bold;
+/* --- LOGO CORRIGIDA --- */
+/* Se a logo é uma imagem: */
+.logo-area img.logo { 
+    height: 35px; /* Tamanho da imagem */
+    width: 35px; /* Garantir que seja quadrada se precisar */
+    border-radius: 50%; /* Se a imagem já tiver um fundo, isso a fará redonda */
+    object-fit: cover; /* Garante que a imagem preencha o círculo */
+    /* Removemos os estilos de background-color, font-size etc. que causaram o bug */
 }
 
-.logo-text h1 {
-    font-size: 1.1rem; /* Ajustado para ser mais discreto */
+/* Se a logo é um texto (ex: "T"), estilize o h1 */
+.logo-area .logo-text h1 {
+    font-size: 1.1rem;
     color: #e0e0e0;
-    font-weight: normal;
+    font-weight: bold; /* Deixei bold para o exemplo, ajuste se necessário */
+    margin: 0; /* Remove margem padrão */
 }
 
 .logo-text span {
-    font-size: 0.7rem; /* Ajustado */
+    font-size: 0.7rem;
     color: #a0a0b0;
 }
 
 .nav-links {
     display: flex;
-    gap: 1.5rem; /* Espaçamento entre os links */
+    gap: 1.5rem;
     align-items: center;
 }
 
 .nav-link {
-    color: #c0c0d0; /* Links mais claros */
+    color: #c0c0d0;
     text-decoration: none;
     font-size: 0.95rem;
     transition: color 0.3s;
@@ -81,13 +78,13 @@ body {
     color: #ffffff;
 }
 
-/* BOTÃO DE LOGIN - Adaptação do botão de "Entrar" da imagem */
+/* BOTÃO DE LOGIN */
 .btn-login {
     padding: 0.7rem 1.5rem;
-    border-radius: 10px; /* Arredondamento */
+    border-radius: 10px;
     border: none;
     cursor: pointer;
-    background: #503192; /* Roxo escuro para o botão de login */
+    background: #503192;
     color: white;
     font-weight: bold;
     transition: background 0.3s, transform 0.3s;
@@ -95,7 +92,7 @@ body {
 }
 
 .btn-login:hover {
-    background: #6a3abf; /* Roxo mais claro no hover */
+    background: #6a3abf;
     transform: translateY(-2px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
 }
@@ -104,15 +101,15 @@ body {
 .product-badges {
     display: flex;
     gap: 10px;
-    margin-right: 2rem; /* Espaçamento antes dos links da navbar */
+    margin-right: 2rem;
 }
 
 .badge {
     display: flex;
     align-items: center;
     padding: 0.3rem 0.8rem;
-    background: rgba(255, 255, 255, 0.08); /* Fundo sutil */
-    border-radius: 20px; /* Bem arredondado */
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
     color: #e0e0e0;
     font-size: 0.75rem;
     font-weight: bold;
@@ -121,13 +118,13 @@ body {
 }
 
 .badge span {
-    color: #a0a0a0; /* Cor do texto secundário */
+    color: #a0a0a0;
     font-weight: normal;
 }
 
 .badge-icon {
     font-size: 0.9rem;
-    color: #7b4397; /* Cor roxa para o ícone */
+    color: #7b4397;
 }
 
 /* HERO SECTION - Título principal */
@@ -142,30 +139,30 @@ body {
 }
 
 .hero h2 {
-    font-size: 2.8rem; /* Tamanho da fonte grande */
+    font-size: 2.8rem;
     color: white;
     margin-bottom: 0.8rem;
     font-weight: 700;
 }
 
 .hero p {
-    font-size: 1.2rem; /* Subtítulo */
+    font-size: 1.2rem;
     color: #c0c0d0;
     margin-bottom: 2rem;
 }
 
 /* CARD CENTRAL (Hero Card) */
 .intro-card {
-    max-width: 800px; /* Largura um pouco maior */
+    max-width: 800px;
     width: 90%;
-    padding: 2.5rem; /* Mais padding */
-    border-radius: 20px; /* Mais arredondado */
-    background: rgba(20, 20, 40, 0.7); /* Fundo escuro semi-transparente */
-    backdrop-filter: blur(20px); /* Efeito de glassmorphism bem forte */
-    border: 1px solid rgba(255, 255, 255, 0.18); /* Borda mais visível */
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5); /* Sombra mais profunda */
-    margin-bottom: 4rem; /* Espaçamento */
-    text-align: left; /* Alinhamento do texto */
+    padding: 2.5rem;
+    border-radius: 20px;
+    background: rgba(20, 20, 40, 0.7);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+    margin-bottom: 4rem;
+    text-align: left;
 }
 
 .intro-card h3 {
@@ -181,14 +178,14 @@ body {
 }
 
 .intro-card .code-area {
-    background: #1a1a2e; /* Fundo mais escuro para o bloco de código/texto */
+    background: #1a1a2e;
     padding: 1.5rem;
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    font-family: 'Consolas', 'Monaco', monospace; /* Fonte monoespaçada */
+    font-family: 'Consolas', 'Monaco', monospace;
     font-size: 0.9rem;
     color: #e0e0e0;
-    white-space: pre-wrap; /* Quebra de linha */
+    white-space: pre-wrap;
     margin-bottom: 1.5rem;
 }
 
@@ -215,7 +212,28 @@ body {
     color: #ffffff;
 }
 
-.action-btn {
+/* --- BOTÕES VERDES BRILHANTES --- */
+.action-btn.green-brilliant { /* Use essa classe no seu HTML para o botão verde */
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    background: #00ff99; /* Verde neon brilhante */
+    color: #1a1a1a; /* Texto escuro para contraste */
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 255, 153, 0.6); /* Sombra brilhante */
+}
+
+.action-btn.green-brilliant:hover {
+    background: #00e68a; /* Um pouco mais escuro no hover */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 255, 153, 0.8); /* Sombra mais intensa */
+}
+
+
+.action-btn { /* Estilo padrão para outros action-buttons, se houver */
     padding: 0.6rem 1.2rem;
     border-radius: 8px;
     background: #3a3a5e; /* Fundo do botão dentro do card */
@@ -232,19 +250,20 @@ body {
     transform: translateY(-1px);
 }
 
+
 /* BOTÕES ABAIXO DO CARD (Hero Buttons) */
 .hero-buttons {
     display: flex;
     gap: 1.5rem;
     margin-top: 2rem;
-    flex-wrap: wrap; /* Para responsividade */
+    flex-wrap: wrap;
     justify-content: center;
 }
 
 .hero-button {
     padding: 0.8rem 1.8rem;
     border-radius: 10px;
-    background: #2a2a4a; /* Fundo escuro, roxo-azulado */
+    background: #2a2a4a;
     color: #e0e0e0;
     border: 1px solid rgba(255, 255, 255, 0.1);
     cursor: pointer;
@@ -255,7 +274,7 @@ body {
 }
 
 .hero-button:hover {
-    background: #3a3a60; /* Fundo um pouco mais claro no hover */
+    background: #3a3a60;
     border-color: rgba(255, 255, 255, 0.2);
     transform: translateY(-2px);
 }
@@ -285,7 +304,7 @@ body {
 .community-tag {
     padding: 0.6rem 1.2rem;
     border-radius: 20px;
-    background: #2a2a4a; /* Mesmo fundo dos botões hero */
+    background: #2a2a4a;
     color: #c0c0d0;
     font-size: 0.9rem;
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -298,13 +317,10 @@ body {
     border-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Ajustes gerais para ícones, se usados (apenas exemplo) */
 .icon {
-    /* Adicione estilos para seus ícones se estiver usando fontes de ícones */
     margin-right: 5px;
 }
 
-/* A section 'Screenshots' e 'Carousel' não foi incluída na imagem, mas manterei o estilo base */
 .carousel-section {
     text-align: center;
     padding: 2rem 1rem;
@@ -338,14 +354,14 @@ body {
     100% { transform: translateX(-1600px); }
 }
 
-/* Footer (mantendo o estilo escuro moderno) */
+/* Footer */
 footer {
     text-align: center;
     padding: 2rem;
     width: 100%;
     background: rgba(10, 10, 20, 0.8);
     border-top: 1px solid rgba(255, 255, 255, 0.08);
-    margin-top: auto; /* Empurra o footer para o final da página */
+    margin-top: auto;
 }
 
 footer a {
@@ -358,7 +374,7 @@ footer a:hover {
     color: #e5e7eb;
 }
 
-/* Modal (mantendo o estilo escuro moderno) */
+/* Modal */
 .modal {
     display: flex;
     align-items: center;
@@ -395,11 +411,11 @@ footer a:hover {
 }
 
 /* ===== Hover Animation Added ===== */
-button, .btn, .hero-button, .action-btn {
+button, .btn, .hero-button, .action-btn:not(.green-brilliant) {
   transition: all 0.3s ease;
 }
 
-button:hover, .btn:hover, .hero-button:hover, .action-btn:hover {
-  transform: translateY(-2px); /* Efeito de elevação sutil */
-  box-shadow: 0px 8px 20px rgba(78, 43, 137, 0.6); /* Sombra roxa no hover */
+button:hover, .btn:hover, .hero-button:hover, .action-btn:not(.green-brilliant):hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 8px 20px rgba(78, 43, 137, 0.6);
 }
