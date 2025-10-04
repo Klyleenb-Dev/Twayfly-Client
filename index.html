@@ -1,58 +1,70 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Twayfly - Redesign</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Twayfly Client</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header fade-in-down">
-    <div class="container header-inner">
-      <a class="logo" href="#">Twayfly</a>
-      <nav class="nav">
-        <a href="#home">Home</a>
-        <a href="#features">Recursos</a>
-        <a href="#download" class="btn">Download</a>
-      </nav>
+  <header class="navbar">
+    <div class="logo-area">
+      <img src="logo.png" alt="Logo" class="logo">
+      <div class="logo-text">
+        <h1>Twayfly Client</h1>
+        <span>launcher & tools</span>
+      </div>
     </div>
+    <nav>
+      <a href="Twayfly Client.zip" class="nav-link">Download</a>
+      <button id="openLoginBtn" class="btn">Entrar</button>
+    </nav>
   </header>
 
-  <main>
-    <section id="home" class="hero container fade-in">
-      <h1>Visual renovado — cinza vivo com verde suave</h1>
-      <p class="lead">Layout limpo, animações suaves e foco na usabilidade. Mantemos as funcionalidades existentes — só mudamos o visual.</p>
-      <div class="hero-actions">
-        <a class="btn" href="#download">Baixar .zip</a>
-        <a class="ghost" href="#features">Ver recursos</a>
+  <main class="hero">
+    <section class="intro-card glass">
+      <h2>Um launcher leve e moderno para sua comunidade</h2>
+      <p>Caro desenvolvedor — interface escura, desempenho otimizado e integração fácil.
+         Customizável, seguro e bonito.</p>
+      <div class="buttons">
+        <a href="Twayfly Client.zip" download class="btn green">Baixar agora</a>
+        <a href="changelog.html" class="btn">Documentação</a>
+      </div>
+      <div class="features">
+        <span>⚡ Design moderno (Dark + Glassmorphism)</span>
+        <span>🔄 Atualizações automáticas</span>
+        <span>🤝 Integração com Discord e Roblox</span>
       </div>
     </section>
-
-    <section id="features" class="container cards-grid slide-up">
-      <article class="card">
-        <h3>Design organizado</h3>
-        <p>Espaçamento consistente, tipografia clara e componentes reaproveitáveis.</p>
-      </article>
-      <article class="card">
-        <h3>Animações suaves</h3>
-        <p>Fade, deslocamento leve e hover sutil para uma sensação fluida sem exagero.</p>
-      </article>
-      <article class="card">
-        <h3>Compatibilidade</h3>
-        <p>HTML/CSS/JS puro para integrar no seu projeto atual sem complicação.</p>
-      </article>
-    </section>
-
-    <section id="download" class="container download-section fade-in">
-      <h2>Download do pacote</h2>
-      <p>O ZIP contém o projeto pronto com o tema aplicado — substitua ou integre com o seu repositório.</p>
-      <a class="btn big" id="downloadZip" href="twayfly-redesign.zip" download>Baixar .zip</a>
-    </section>
-
-    <section class="container footer-section slide-up">
-      <p class="muted">Feito rapidamente — tema: cinza vivo + verde escuro suave. Animações: suaves e elegantes.</p>
-    </section>
   </main>
+
+  <section class="carousel-section">
+    <h2>Screenshots</h2>
+    <div class="carousel">
+      <div class="carousel-track">
+        <img src="screenshot1.png" alt="screenshot1">
+        <img src="screenshot2.png" alt="screenshot2">
+        <img src="screenshot3.png" alt="screenshot3">
+        <img src="screenshot4.png" alt="screenshot4">
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <a href="https://klyleenb-dev.github.io/Twayfly-Client">Site</a>
+    <a href="https://discord.gg/YgrFDK6eUF">Discord</a>
+    <a href="https://www.roblox.com/share?code=c17183120c099e4faf5b6bf77ffb27b0&type=Profile&source=ProfileShare&stamp=1759453038240">Roblox</a>
+  </footer>
+
+  <!-- Modal de Login indisponível -->
+  <div id="loginUnavailable" class="modal hidden">
+    <div class="modal-content glass">
+      <span id="closeUnavailable" class="close">&times;</span>
+      <h2>Login indisponível</h2>
+      <p>O login não está disponível no momento.</p>
+      <button id="closeUnavailableBtn" class="btn green">Fechar</button>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
