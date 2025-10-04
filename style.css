@@ -1,35 +1,29 @@
-/* Navbar */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  /* PRETO TRANSPARENTE: Aumentamos a transparência para o fundo "não tão escuro" aparecer um pouco */
-  background: rgba(10, 10, 20, 0.8); 
-  backdrop-filter: blur(10px); 
-  /* Adiciona uma borda sutil na parte de baixo para dar definição */
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08); 
-  
-  /* NOVIDADE: Deixa a navbar arredondada (apenas as bordas inferiores) */
-  border-bottom-left-radius: 15px; 
-  border-bottom-right-radius: 15px; 
-  /* Nota: Se quiser todas as bordas arredondadas, use apenas: border-radius: 15px; */
-}
-
-/* O resto do código (não alterado) */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* TEMA ESCURO MODERNO E SUAVE */
+/* TEMA ESCURO MODERNO E SUAVE (AGORA MAIS CINZA) */
 body {
   font-family: Arial, sans-serif;
-  /* Fundo preto suave, não tão escuro, com um toque azulado (Navy Blue) */
-  background: radial-gradient(circle at top, #1c2a41, #0a101b); 
+  /* NOVIDADE: Fundo mais cinza, sem o toque azulado */
+  background: radial-gradient(circle at top, #2b2b2b, #1a1a1a); 
   color: #f3f4f6; /* Texto branco-sujo para ser menos agressivo que o branco puro */
   line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(10, 10, 20, 0.8); 
+  backdrop-filter: blur(10px); 
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08); 
+  border-bottom-left-radius: 15px; 
+  border-bottom-right-radius: 15px; 
 }
 
 .logo-area {
@@ -44,7 +38,7 @@ body {
 
 .logo-text h1 {
   font-size: 1.2rem;
-  color: #e5e7eb; /* Cor do texto do logo */
+  color: #e5e7eb; 
 }
 
 .logo-text span {
@@ -54,13 +48,13 @@ body {
 
 .nav-link {
   margin-right: 1rem;
-  color: #d1d5db; /* Links um pouco mais claros */
+  color: #d1d5db; 
   text-decoration: none;
   transition: color 0.3s;
 }
 
 .nav-link:hover {
-  color: #ffffff; /* Hover no link mais brilhante */
+  color: #ffffff; 
 }
 
 /* Botões */
@@ -69,7 +63,6 @@ body {
   border-radius: 8px;
   border: none;
   cursor: pointer;
-  /* Botão cinza escuro suave */
   background: #283747;
   color: white;
   transition: 0.3s;
@@ -77,13 +70,12 @@ body {
 }
 
 .btn.green {
-  /* Verde vibrante para contraste (Accent color) */
   background: #10b981; 
 }
 
 .btn.green:hover {
   background: #059669;
-  transform: scale(1.05); /* Hover um pouco mais sutil */
+  transform: scale(1.05); 
 }
 
 .btn:hover {
@@ -122,7 +114,6 @@ body {
 
 .features span {
   display: inline-block;
-  /* Background dos features um pouco mais escuro e sutil */
   background: rgba(255,255,255,0.08);
   padding: 0.5rem 1rem;
   border-radius: 8px;
@@ -133,11 +124,10 @@ body {
 
 /* Glass effect */
 .glass {
-  /* Efeito de vidro modernizado */
   background: rgba(255, 255, 255, 0.05); 
-  backdrop-filter: blur(15px); /* Mais blur! */
-  border: 1px solid rgba(255, 255, 255, 0.15); /* Borda mais definida */
-  box-shadow: 0 10px 30px rgba(0,0,0,0.4); /* Sombra mais intensa */
+  backdrop-filter: blur(15px); 
+  border: 1px solid rgba(255, 255, 255, 0.15); 
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4); 
 }
 
 /* Carousel */
@@ -175,7 +165,6 @@ body {
 footer {
   text-align: center;
   padding: 2rem;
-  /* Fundo do footer mais consistente */
   background: rgba(10, 10, 20, 0.8); 
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
@@ -197,7 +186,6 @@ footer a:hover {
   justify-content: center;
   position: fixed;
   inset: 0;
-  /* Background do modal mais escuro para focar */
   background: rgba(0, 0, 0, 0.7); 
   backdrop-filter: blur(8px);
   z-index: 999;
@@ -208,7 +196,6 @@ footer a:hover {
 }
 
 .modal-content {
-  /* Fundo do modal mais escuro, mas não preto puro */
   background: #1e293b; 
   padding: 2rem;
   border-radius: 12px;
@@ -235,6 +222,5 @@ button, .btn, .button {
 
 button:hover, .btn:hover, .button:hover {
   transform: scale(1.03); 
-  /* Sombra de hover verde suave */
   box-shadow: 0px 0px 15px rgba(16, 185, 129, 0.6); 
 }
