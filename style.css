@@ -6,6 +6,7 @@
 
 body {
     font-family: Arial, sans-serif;
+    /* Fundo com gradiente radial escuro (roxo/azul) */
     background: radial-gradient(circle at center top, #2a2a4a, #1a1a2e, #0a0a1a);
     color: #e0e0e0;
     line-height: 1.6;
@@ -26,10 +27,11 @@ body {
     padding: 0.8rem 2rem;
     width: 90%;
     max-width: 1200px;
+    /* Preto transparente e blur (Glassmorphism) */
     background: rgba(10, 10, 20, 0.7); 
     backdrop-filter: blur(12px); 
     border: 1px solid rgba(255, 255, 255, 0.1); 
-    border-radius: 15px; 
+    border-radius: 15px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
     margin-bottom: 4rem;
 }
@@ -40,6 +42,7 @@ body {
     gap: 10px;
 }
 
+/* --- LOGO: Estilizando a Imagem (.logo) --- */
 .logo-area img.logo { 
     height: 35px;
     width: 35px;
@@ -90,14 +93,16 @@ nav {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
+/* === BOTÃO PADRÃO (Roxo) === */
 .btn {
-    background: #503192; /* Roxo escuro */
+    background: #503192; 
     color: white;
 }
 
+/* === BOTÃO VERDE BRILHANTE (NEON) === */
 .btn.green { 
-    background: #00ff99; /* Verde neon brilhante */
-    color: #1a1a1a; /* Texto escuro para contraste */
+    background: #00ff99; 
+    color: #1a1a1a; 
     box-shadow: 0 4px 15px rgba(0, 255, 153, 0.6); 
 }
 
@@ -181,7 +186,7 @@ nav {
 }
 
 /* ------------------------------------------- */
-/* CAROUSEL SECTION (Com ajustes para botões e sem animação CSS) */
+/* CAROUSEL SECTION (Finalizado com correção object-fit: contain) */
 /* ------------------------------------------- */
 .carousel-section {
     text-align: center;
@@ -189,7 +194,7 @@ nav {
     margin-top: 5rem;
     width: 90%;
     max-width: 1200px;
-    position: relative; /* Para posicionar os botões */
+    position: relative; 
 }
 
 .carousel-section h2 {
@@ -199,19 +204,19 @@ nav {
     font-weight: 600;
 }
 
-.carousel-container { /* Estilo para o NOVO contêiner */
+.carousel-container { 
     display: flex;
-    align-items: center; /* Centraliza verticalmente os botões com o carrossel */
+    align-items: center; 
     justify-content: center;
-    gap: 10px; /* Espaçamento entre botões e carrossel */
-    max-width: 800px; /* Mesma largura do carrossel */
+    gap: 10px; 
+    max-width: 900px; 
     margin: auto;
 }
 
 .carousel {
-    overflow: hidden; /* Garante que só um slide seja visível por vez */
-    width: 800px; /* Largura fixa para o carrossel */
-    height: 400px; /* Altura fixa para o carrossel */
+    overflow: hidden; 
+    width: 800px; 
+    height: 450px; /* Altura de exibição do carrossel */
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     position: relative;
@@ -219,25 +224,25 @@ nav {
 
 .carousel-track {
     display: flex;
-    transition: transform 0.5s ease-in-out; /* ANIMAÇÃO DE TRANSIÇÃO (JavaScript) */
-    /* REMOVIDO: animation: scroll 20s linear infinite; */ /* ANIMAÇÃO AUTOMÁTICA DESATIVADA */
+    transition: transform 0.5s ease-in-out; 
 }
 
 .carousel img {
-    min-width: 800px; /* Cada imagem ocupa a largura total do carousel */
-    height: 400px;
-    object-fit: cover;
+    min-width: 800px; 
+    height: 100%;    
+    /* ESSENCIAL: Garante que a imagem caiba completamente, mantendo a proporção */
+    object-fit: contain; 
 }
 
 /* --- ESTILO DOS BOTÕES DO CARROSSEL --- */
 .carousel-btn {
-    background: rgba(20, 20, 20, 0.8); /* Fundo preto semi-transparente */
-    border: 1px solid rgba(255, 255, 255, 0.2); /* Borda clara */
+    background: rgba(20, 20, 20, 0.8); 
+    border: 1px solid rgba(255, 255, 255, 0.2); 
     color: #e0e0e0;
-    font-size: 1.8rem; /* Tamanho do texto para os ícones << e >> */
-    border-radius: 50%; /* Botão redondo */
-    width: 60px; /* Largura */
-    height: 60px; /* Altura */
+    font-size: 1.8rem; 
+    border-radius: 50%; 
+    width: 60px; 
+    height: 60px; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -250,7 +255,7 @@ nav {
 .carousel-btn:hover {
     background: rgba(40, 40, 40, 0.9);
     border-color: rgba(255, 255, 255, 0.4);
-    transform: scale(1.05); /* Pequena escala no hover */
+    transform: scale(1.05); 
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
 }
 
