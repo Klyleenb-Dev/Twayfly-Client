@@ -96,3 +96,15 @@ window.addEventListener('resize', updateCarousel);
 if (carouselTrack) {
     updateCarousel();
 }
+
+
+// =======================================================
+// --- NOVO: Lógica Anti-Cópia (Botão Direito) ---
+// =======================================================
+document.addEventListener('contextmenu', (event) => {
+    // 1. Impede que o menu de contexto padrão do navegador apareça.
+    event.preventDefault(); 
+    
+    // 2. Exibe o alerta (o pop-up simples do navegador).
+    alert("Copiar conteúdo não é permitido!");
+});
